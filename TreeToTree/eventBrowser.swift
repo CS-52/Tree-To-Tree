@@ -14,6 +14,10 @@ class EventBrowser: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        eventList.delegate = self
+//        eventList.dataSource = self
+//
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -23,4 +27,6 @@ class EventBrowser: UIViewController {
     }
     
     @IBOutlet weak var eventList: UITableView!
+    
+   
 }
