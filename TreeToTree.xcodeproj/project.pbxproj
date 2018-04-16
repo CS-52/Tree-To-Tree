@@ -16,6 +16,8 @@
 		8232B7ED207AC56300D0C5AF /* TreeToTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */; };
 		9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFEB2083FE17008348AF /* EventPageViewController.swift */; };
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
+		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
+		9939FFFA208461CC008348AF /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF9208461CC008348AF /* HeartButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		8232B7EE207AC56300D0C5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
+		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
+		9939FFF9208461CC008348AF /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +108,8 @@
 				8232B7CC207AC56200D0C5AF /* AppDelegate.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
+				9939FFF9208461CC008348AF /* HeartButton.swift */,
 				9939FFED20840487008348AF /* EventBrowserController.swift */,
 				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
 				8232B7D3207AC56200D0C5AF /* Assets.xcassets */,
@@ -267,8 +273,10 @@
 			files = (
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
 				8232B7CD207AC56200D0C5AF /* AppDelegate.swift in Sources */,
+				9939FFFA208461CC008348AF /* HeartButton.swift in Sources */,
 				9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */,
 				9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */,
+				9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

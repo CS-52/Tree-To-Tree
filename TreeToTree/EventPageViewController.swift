@@ -10,15 +10,21 @@ import UIKit
 
 class EventPageViewController: UIViewController {
     
+    @IBOutlet weak var orgLabel: UITextView!
+    @IBOutlet weak var dateLabel: UITextView!
     @IBOutlet weak var nameLabel: UITextView!
+    @IBOutlet weak var eventImage: UIImageView!
     
-    var arrayElem:String?
+    //var arrayElem:String?
+    var arrayElem:Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        nameLabel.text = arrayElem 
         
+        nameLabel.text = arrayElem?.name
+        dateLabel.text = arrayElem?.date
+        eventImage.image = arrayElem?.image
+
     }
     
     override func didReceiveMemoryWarning() {
