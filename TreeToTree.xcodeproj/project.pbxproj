@@ -18,6 +18,7 @@
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
 		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
 		9939FFFA208461CC008348AF /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF9208461CC008348AF /* HeartButton.swift */; };
+		ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7D7C92086DEB300547CC1 /* EventClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
 		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
 		9939FFF9208461CC008348AF /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		ADC7D7C92086DEB300547CC1 /* EventClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
 				9939FFF9208461CC008348AF /* HeartButton.swift */,
 				9939FFED20840487008348AF /* EventBrowserController.swift */,
+				ADC7D7C92086DEB300547CC1 /* EventClass.swift */,
 				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
 				8232B7D3207AC56200D0C5AF /* Assets.xcassets */,
 				8232B7D5207AC56200D0C5AF /* LaunchScreen.storyboard */,
@@ -273,6 +276,7 @@
 			files = (
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
 				8232B7CD207AC56200D0C5AF /* AppDelegate.swift in Sources */,
+				ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */,
 				9939FFFA208461CC008348AF /* HeartButton.swift in Sources */,
 				9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */,
 				9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */,
