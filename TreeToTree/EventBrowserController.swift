@@ -97,12 +97,9 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         
     }
     
+    
+    @IBAction func unwindToEventBrowser(segue:UIStoryboardSegue) { }
    
-    
-    
-    
-    
-    
 }
 
 

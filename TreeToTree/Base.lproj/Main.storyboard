@@ -265,27 +265,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Eji-u2-ijf">
-                                <rect key="frame" x="0.0" y="20" width="275" height="56"/>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Eji-u2-ijf">
+                                <rect key="frame" x="0.0" y="20" width="295" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="mLr-DL-BdV"/>
                                 </constraints>
+                                <color key="barTintColor" red="0.53007483479999995" green="0.85670226810000005" blue="0.73724496360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <outlet property="delegate" destination="uxr-VI-EPk" id="NeI-Xd-FcK"/>
                                 </connections>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-GC-4pD">
-                                <rect key="frame" x="295" y="28" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cf1-GC-4pD">
+                                <rect key="frame" x="295" y="20" width="80" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="XPu-67-Ghx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.53007483479999995" green="0.85670226810000005" blue="0.73724496360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="E5U-Kg-dC5" kind="unwind" identifier="unwindSegueToEventBrowser" unwindAction="unwindToEventBrowserWithSegue:" id="ME2-4L-9yN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Eji-u2-ijf" firstAttribute="top" secondItem="pgr-Jv-chh" secondAttribute="top" constant="20" id="1oP-U7-WNO"/>
-                            <constraint firstAttribute="trailing" secondItem="Eji-u2-ijf" secondAttribute="trailing" constant="100" id="Wvk-fW-LwZ"/>
+                            <constraint firstItem="cf1-GC-4pD" firstAttribute="leading" secondItem="Eji-u2-ijf" secondAttribute="trailing" id="R2t-kZ-OeX"/>
+                            <constraint firstAttribute="trailing" secondItem="Eji-u2-ijf" secondAttribute="trailing" constant="80" id="Wvk-fW-LwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="cf1-GC-4pD" secondAttribute="trailing" id="bIl-bq-NTn"/>
                             <constraint firstItem="Eji-u2-ijf" firstAttribute="leading" secondItem="pgr-Jv-chh" secondAttribute="leading" id="sUg-NC-yr7"/>
+                            <constraint firstItem="cf1-GC-4pD" firstAttribute="top" secondItem="pgr-Jv-chh" secondAttribute="top" constant="20" id="wUF-z7-KOl"/>
                         </constraints>
                     </view>
                     <connections>
@@ -293,6 +306,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bCi-Be-WFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="E5U-Kg-dC5" userLabel="Exit" sceneMemberID="exit"/>
                 <searchDisplayController id="Mrv-nj-TNs">
                     <connections>
                         <outlet property="delegate" destination="uxr-VI-EPk" id="A6S-Y5-ufu"/>
@@ -303,7 +317,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1442" y="-369"/>
+            <point key="canvasLocation" x="1440.8" y="-369.26536731634184"/>
         </scene>
         <!--Event-->
         <scene sceneID="xV4-x8-aEO">
@@ -468,7 +482,7 @@
     <resources>
         <image name="Challah-Bread" width="849" height="565"/>
         <image name="heartOutline" width="28" height="26"/>
-        <image name="left-arrow" width="14" height="14"/>
+        <image name="left-arrow" width="22" height="22"/>
         <image name="search" width="19" height="19"/>
     </resources>
 </document>
