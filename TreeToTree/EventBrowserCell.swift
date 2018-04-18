@@ -18,7 +18,16 @@ class EventBrowserCell: UITableViewCell {
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var shifts: UILabel!
     @IBOutlet weak var peopleGoing: UILabel!
-    @IBOutlet weak var interest: HeartButton!
+    @IBOutlet weak var interest: UIButton!
+    @IBAction func onHeartClick(_ sender: Any) {
+        let button = sender as! UIButton;
+        if((button.image(for: .normal)) == #imageLiteral(resourceName: "heartOutline")) {
+            button.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
+        } else {
+            button.setImage(#imageLiteral(resourceName: "heartOutline"), for: .normal)
+        }
+        
+    }
     
     
     
