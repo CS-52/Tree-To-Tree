@@ -20,17 +20,49 @@ struct Event {
 
 class EventBrowserController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var sideMenuImage: UIImageView!
     @IBOutlet weak var searchIcon: UIBarButtonItem!
+    
+    @IBOutlet var mainView: UIView!
+    
     @IBOutlet weak var tableView: UITableView!
    
+    @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
+    
+    @IBOutlet weak var EventBrowswer: UIStackView!
+    var menuShowing = false
     
     var eventsArray = [Event]()
+    
+    @IBAction func showMenu(_ sender: Any) {
+        if (menuShowing) {
+            leadingConstraint.constant = 0
+            trailingConstraint.constant = 0
+            EventBrowswer.layer.opacity = 1
+
+        } else {
+        leadingConstraint.constant = 250
+        trailingConstraint.constant = -250
+        EventBrowswer.layer.opacity = 0.3
+        }
+        UIView.animate(withDuration: 0.3, animations: {
+            self.view.layoutIfNeeded()
+        })
+        menuShowing = !menuShowing
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        mainView.layer.shadowOpacity = 1
+        mainView.layer.shadowRadius = 10
+
+        
+        self.sideMenuImage.layer.cornerRadius = self.sideMenuImage.frame.size.width / 2;
         
         loadSampleEvents()
         
@@ -73,6 +105,9 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedIndex = indexPath.row //what user taps on
         performSegue(withIdentifier: "segue", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+
+
         
     }
     
