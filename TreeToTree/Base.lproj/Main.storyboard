@@ -118,8 +118,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-YJ-saQ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-YJ-saQ">
                                 <rect key="frame" x="249" y="0.0" width="1" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -315,7 +316,8 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Kd-vhL">
                                 <rect key="frame" x="282" y="0.0" width="93" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="93" id="T1K-26-1uD"/>
+                                    <constraint firstAttribute="height" constant="36" id="0Kt-Dm-E8c"/>
+                                    <constraint firstAttribute="width" constant="93" id="Drw-kz-fNh"/>
                                 </constraints>
                                 <state key="normal" title="Filter"/>
                             </button>
@@ -324,16 +326,13 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Jpx-x8-RUN" secondAttribute="trailing" id="09p-Tr-pb7"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="5dn-NP-PrC"/>
-                            <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="top" id="8tz-Wn-Sh9"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" constant="28" id="HdC-wt-7a5"/>
                             <constraint firstItem="oQd-Jl-iMV" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="bottom" id="KH7-JY-rco"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="bottom" secondItem="oQd-Jl-iMV" secondAttribute="top" id="RWf-d2-496"/>
-                            <constraint firstItem="Jpx-x8-RUN" firstAttribute="trailing" secondItem="81S-Kd-vhL" secondAttribute="trailing" id="fu6-Jf-YSl"/>
-                            <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="9GF-YJ-saQ" secondAttribute="top" id="gJJ-da-YtO"/>
+                            <constraint firstAttribute="trailing" secondItem="81S-Kd-vhL" secondAttribute="trailing" id="WGJ-ZT-Uc2"/>
                             <constraint firstItem="Xfw-MX-dAa" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="gLI-7r-hHh"/>
-                            <constraint firstItem="81S-Kd-vhL" firstAttribute="leading" secondItem="9GF-YJ-saQ" secondAttribute="trailing" constant="32" id="hCN-uK-VZp"/>
-                            <constraint firstItem="oQd-Jl-iMV" firstAttribute="top" secondItem="81S-Kd-vhL" secondAttribute="bottom" constant="523" id="ous-JL-fl5"/>
                             <constraint firstItem="Xfw-MX-dAa" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="t9U-UH-8dS"/>
+                            <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="wqe-BZ-auO"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -723,7 +722,7 @@
         <image name="austinchow" width="1106" height="1509"/>
         <image name="heartOutline" width="28" height="26"/>
         <image name="left-arrow" width="22" height="22"/>
-        <image name="menu" width="36" height="31"/>
+        <image name="menu" width="18" height="15"/>
         <image name="search" width="19" height="19"/>
     </resources>
 </document>
