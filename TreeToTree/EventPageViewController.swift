@@ -10,9 +10,11 @@ import UIKit
 
 class EventPageViewController: UIViewController {
     
-    @IBOutlet weak var orgLabel: UITextView!
-    @IBOutlet weak var dateLabel: UITextView!
-    @IBOutlet weak var nameLabel: UITextView!
+    @IBOutlet weak var eventSummary: UILabel!
+    @IBOutlet weak var locationLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var orgLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     
     //var arrayElem:String?
