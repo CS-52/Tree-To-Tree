@@ -680,7 +680,7 @@
                                                             <constraint firstAttribute="height" constant="44" id="b1P-7U-Byv"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Challah-Bread" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-J7-fZ0">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Mehran" translatesAutoresizingMaskIntoConstraints="NO" id="WCf-J7-fZ0">
                                                         <rect key="frame" x="199" y="0.0" width="44" height="44"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="44" id="1jl-6E-ooS"/>
@@ -1108,6 +1108,7 @@
     </scenes>
     <resources>
         <image name="Challah-Bread" width="849" height="565"/>
+        <image name="Mehran" width="100" height="100"/>
         <image name="afriendlyface" width="780" height="780"/>
         <image name="austinchow" width="1106" height="1509"/>
         <image name="heartOutline" width="28" height="26"/>
