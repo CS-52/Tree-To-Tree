@@ -106,6 +106,86 @@
             </objects>
             <point key="canvasLocation" x="-1454" y="153"/>
         </scene>
+        <!--Filter-->
+        <scene sceneID="BvX-cS-nZW">
+            <objects>
+                <viewController id="at7-p1-yDB" customClass="Filter" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="G0Q-F1-4g4"/>
+                        <viewControllerLayoutGuide type="bottom" id="SFg-YC-HXZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bxI-wG-5E2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbz-Sp-2D5">
+                                <rect key="frame" x="61" y="177" width="214" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="Filter Me"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBn-L3-Qgv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1440.8" y="-1245.4272863568217"/>
+        </scene>
+        <!--Your Events-->
+        <scene sceneID="TVt-91-AsZ">
+            <objects>
+                <viewController id="E6R-Rx-p4U" customClass="YourEvents" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mAj-73-v2G"/>
+                        <viewControllerLayoutGuide type="bottom" id="bu4-iD-pwm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7HR-ve-7PU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="GROUPS" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-RO-a4X">
+                                <rect key="frame" x="52" y="208" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eYC-Xp-5mb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55" y="-528"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="o34-AP-27c">
+            <objects>
+                <viewController id="Mlw-LU-7oh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yGM-6i-gjg"/>
+                        <viewControllerLayoutGuide type="bottom" id="x0k-Q6-jcX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gkb-TU-yXm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Favorited Events" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-OU-azL">
+                                <rect key="frame" x="67" y="63" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i9R-Ic-gQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="554" y="-1245"/>
+        </scene>
         <!--Event Browser-->
         <scene sceneID="Ypj-Z5-xud">
             <objects>
@@ -157,12 +237,18 @@
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <color key="tintColor" red="0.41134214400000002" green="0.86638218160000002" blue="0.72766351699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Favorites"/>
+                                        <connections>
+                                            <segue destination="Mlw-LU-7oh" kind="show" id="i41-69-jCQ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKB-Q8-xYj">
                                         <rect key="frame" x="91" y="372" width="68" height="40"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                         <color key="tintColor" red="0.41134214400000002" green="0.86638218160000002" blue="0.72766351699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Groups"/>
+                                        <connections>
+                                            <segue destination="E6R-Rx-p4U" kind="show" id="yMw-18-XdE"/>
+                                        </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="austinchow" translatesAutoresizingMaskIntoConstraints="NO" id="Yhh-rR-1J7">
                                         <rect key="frame" x="63" y="35" width="124" height="124"/>
@@ -320,19 +406,22 @@
                                     <constraint firstAttribute="width" constant="93" id="Drw-kz-fNh"/>
                                 </constraints>
                                 <state key="normal" title="Filter"/>
+                                <connections>
+                                    <segue destination="at7-p1-yDB" kind="show" id="b0Y-Zb-tQI"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="Jpx-x8-RUN" secondAttribute="trailing" id="09p-Tr-pb7"/>
+                            <constraint firstItem="Jpx-x8-RUN" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" constant="28" id="12J-Mn-VRg"/>
+                            <constraint firstItem="Jpx-x8-RUN" firstAttribute="bottom" secondItem="oQd-Jl-iMV" secondAttribute="top" id="5cM-Pv-1BX"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="5dn-NP-PrC"/>
-                            <constraint firstItem="Jpx-x8-RUN" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" constant="28" id="HdC-wt-7a5"/>
-                            <constraint firstItem="oQd-Jl-iMV" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="bottom" id="KH7-JY-rco"/>
-                            <constraint firstItem="Jpx-x8-RUN" firstAttribute="bottom" secondItem="oQd-Jl-iMV" secondAttribute="top" id="RWf-d2-496"/>
+                            <constraint firstItem="oQd-Jl-iMV" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="bottom" id="UAz-MD-DT7"/>
                             <constraint firstAttribute="trailing" secondItem="81S-Kd-vhL" secondAttribute="trailing" id="WGJ-ZT-Uc2"/>
+                            <constraint firstItem="Xfw-MX-dAa" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="XHQ-Rm-fPd"/>
                             <constraint firstItem="Xfw-MX-dAa" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="gLI-7r-hHh"/>
-                            <constraint firstItem="Xfw-MX-dAa" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="t9U-UH-8dS"/>
-                            <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="wqe-BZ-auO"/>
+                            <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="hgw-fe-NeT"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -638,6 +727,8 @@
                             <constraint firstItem="ONA-Aa-0m3" firstAttribute="leading" secondItem="3pw-Ux-5Vc" secondAttribute="leading" id="y7P-2z-vZk"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="375" height="1000"/>
                     <connections>
                         <outlet property="dateLabel" destination="grA-KY-8Hc" id="cLy-B1-7PR"/>
@@ -675,28 +766,37 @@
             </objects>
             <point key="canvasLocation" x="2455" y="499"/>
         </scene>
-        <!--View Controller-->
+        <!--Your Profile-->
         <scene sceneID="88k-fv-KgX">
             <objects>
-                <viewController id="BYQ-xe-q2y" sceneMemberID="viewController">
+                <viewController id="BYQ-xe-q2y" customClass="YourProfile" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ngZ-u6-tv8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xxe-gF-lQv"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="zZF-rf-SQv">
+                    <view key="view" contentMode="scaleToFill" id="zZF-rf-SQv" customClass="YourEvents">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="PROFILE PAGE" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="gpV-6J-13e">
+                                <rect key="frame" x="103" y="224" width="116" height="104"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cEc-EI-tqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-486" y="938"/>
+            <point key="canvasLocation" x="-487.19999999999999" y="937.78110944527748"/>
         </scene>
-        <!--Friends-->
+        <!--Your Friends-->
         <scene sceneID="Ufy-0F-Jei">
             <objects>
-                <viewController id="qDv-2c-oPv" customClass="Friends" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qDv-2c-oPv" customClass="YourFriends" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6Od-4k-pUy"/>
                         <viewControllerLayoutGuide type="bottom" id="ymV-YI-l7C"/>

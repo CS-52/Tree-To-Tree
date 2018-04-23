@@ -18,8 +18,12 @@
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
 		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
 		AD3A7669208D957E005CE7EC /* InterestedFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A7668208D957E005CE7EC /* InterestedFriends.swift */; };
-		AD728ED6208983F10046860A /* FriendsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD728ED5208983F10046860A /* FriendsList.swift */; };
+		AD728ED6208983F10046860A /* YourFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD728ED5208983F10046860A /* YourFriends.swift */; };
 		ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7D7C92086DEB300547CC1 /* EventClass.swift */; };
+		ADFF0771208D9823001E8C43 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0770208D9823001E8C43 /* Filter.swift */; };
+		ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0772208D9D51001E8C43 /* YourEvents.swift */; };
+		ADFF0775208D9DA3001E8C43 /* YourGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0774208D9DA3001E8C43 /* YourGroups.swift */; };
+		ADFF0777208D9E0D001E8C43 /* YourProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0776208D9E0D001E8C43 /* YourProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +61,12 @@
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
 		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
 		AD3A7668208D957E005CE7EC /* InterestedFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedFriends.swift; sourceTree = "<group>"; };
-		AD728ED5208983F10046860A /* FriendsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsList.swift; sourceTree = "<group>"; };
+		AD728ED5208983F10046860A /* YourFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourFriends.swift; sourceTree = "<group>"; };
 		ADC7D7C92086DEB300547CC1 /* EventClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClass.swift; sourceTree = "<group>"; };
+		ADFF0770208D9823001E8C43 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
+		ADFF0772208D9D51001E8C43 /* YourEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourEvents.swift; sourceTree = "<group>"; };
+		ADFF0774208D9DA3001E8C43 /* YourGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroups.swift; sourceTree = "<group>"; };
+		ADFF0776208D9E0D001E8C43 /* YourProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,10 +121,14 @@
 				8232B7CC207AC56200D0C5AF /* AppDelegate.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				ADFF0776208D9E0D001E8C43 /* YourProfile.swift */,
+				ADFF0774208D9DA3001E8C43 /* YourGroups.swift */,
+				ADFF0772208D9D51001E8C43 /* YourEvents.swift */,
+				ADFF0770208D9823001E8C43 /* Filter.swift */,
 				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
 				9939FFED20840487008348AF /* EventBrowserController.swift */,
 				ADC7D7C92086DEB300547CC1 /* EventClass.swift */,
-				AD728ED5208983F10046860A /* FriendsList.swift */,
+				AD728ED5208983F10046860A /* YourFriends.swift */,
 				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
 				8232B7D3207AC56200D0C5AF /* Assets.xcassets */,
 				8232B7D5207AC56200D0C5AF /* LaunchScreen.storyboard */,
@@ -277,13 +289,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD728ED6208983F10046860A /* FriendsList.swift in Sources */,
+				ADFF0777208D9E0D001E8C43 /* YourProfile.swift in Sources */,
+				AD728ED6208983F10046860A /* YourFriends.swift in Sources */,
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
 				8232B7CD207AC56200D0C5AF /* AppDelegate.swift in Sources */,
+				ADFF0775208D9DA3001E8C43 /* YourGroups.swift in Sources */,
+				ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */,
 				ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */,
 				AD3A7669208D957E005CE7EC /* InterestedFriends.swift in Sources */,
 				9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */,
 				9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */,
+				ADFF0771208D9823001E8C43 /* Filter.swift in Sources */,
 				9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
