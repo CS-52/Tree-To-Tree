@@ -2,20 +2,20 @@
 //  Event.swift
 //  TreeToTree
 //
-//  Created by Suzanne Joh on 4/15/18.
+//  Created by Austin Chow on 4/17/18.
 //  Copyright © 2018 CS+Social Good. All rights reserved.
 //
 
 import UIKit
+import Foundation
 
-struct Event {
+struct Event  {
+    let name: String!
+    let date: String!
+    let shifts: String!
+    let image: UIImage!
+    let people: String!
     
-    let cell: Int!
-    var title: String
-    var date: String
-    var shifts: String
-    var image: UIImage
-    var people: String
-    var heart: UIImage
-    
+    //additional things needed: people interested, people going, about, location, organization, fix shifts and people so they are not strings
 }
+

@@ -8,12 +8,6 @@
 
 import UIKit
 
-struct Person {
-    let name: String!
-    let image: UIImage!
-    
-}
-
 class FriendsTableViewController: UITableViewController {
     
     var friendsArray = [Person]()
@@ -110,7 +104,7 @@ class FriendsTableViewController: UITableViewController {
     
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedIndex = indexPath.row
+        //let selectedIndex = indexPath.row
         performSegue(withIdentifier: "segueToProfile", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
@@ -120,8 +114,10 @@ class FriendsTableViewController: UITableViewController {
         let person1 = Person(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
         let person2 = Person(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
         let person3 = Person(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
+        let person4 = Person(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
+        let person5 = Person(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
         
-        friendsArray += [person1, person2, person3]
+        friendsArray += [person1, person2, person3, person4, person5]
         
         
     }

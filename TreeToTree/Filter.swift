@@ -6,4 +6,22 @@
 //  Copyright © 2018 CS+Social Good. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class Filter: UIViewController {
+    
+    @IBOutlet weak var applyFiltersButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        applyFiltersButton.layer.cornerRadius = 5
+        applyFiltersButton.clipsToBounds = true
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+}
