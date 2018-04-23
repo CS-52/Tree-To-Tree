@@ -17,6 +17,13 @@ class EventPageViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var eventImage: UIImageView!
     
+    //image placeholders
+    @IBOutlet weak var friend1: UIImageView!
+    @IBOutlet weak var friend2: UIImageView!
+    @IBOutlet weak var friend3: UIImageView!
+    @IBOutlet weak var friend4: UIImageView!
+    @IBOutlet weak var friend5: UIImageView!
+    
     //var arrayElem:String?
     var arrayElem:Event?
     
@@ -26,7 +33,11 @@ class EventPageViewController: UIViewController {
         nameLabel.text = arrayElem?.name
         dateLabel.text = arrayElem?.date
         eventImage.image = arrayElem?.image
-
+        self.friend1.layer.cornerRadius = self.friend1.frame.size.width / 2;
+        self.friend2.layer.cornerRadius = self.friend1.frame.size.width / 2;
+        self.friend3.layer.cornerRadius = self.friend1.frame.size.width / 2;
+        self.friend4.layer.cornerRadius = self.friend1.frame.size.width / 2;
+        self.friend5.layer.cornerRadius = self.friend1.frame.size.width / 2;
     }
     
     override func didReceiveMemoryWarning() {
