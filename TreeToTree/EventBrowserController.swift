@@ -80,7 +80,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         let cellIdentifier = "EventBrowserCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventBrowserCell  else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of EventBrowserCell.")
         }
         
         let event = eventsArray[indexPath.row]
@@ -119,7 +119,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     }
     
     private func loadSampleEvents() {
-        let photo = UIImage(named: "Challah-Bread")
+        //let photo = UIImage(named: "Challah-Bread")
         let event1 = Event(name: "Challah Bake", date: "Sunday April 15th, 4:30 - 7:30 PM", shifts: "3 shifts available", image: #imageLiteral(resourceName: "Challah-Bread"), people: "Jose, Michelle, Julie, and 5 others", interest: 0)
         
         

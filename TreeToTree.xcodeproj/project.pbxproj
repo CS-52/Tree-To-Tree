@@ -17,8 +17,12 @@
 		9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFEB2083FE17008348AF /* EventPageViewController.swift */; };
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
 		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
-		AD3A7669208D957E005CE7EC /* InterestedFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A7668208D957E005CE7EC /* InterestedFriends.swift */; };
-		AD728ED6208983F10046860A /* YourFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD728ED5208983F10046860A /* YourFriends.swift */; };
+		993BF7C1208DBC94000EB26C /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */; };
+		993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C2208DBE9E000EB26C /* PersonCell.swift */; };
+		993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */; };
+		997A3598208DC3D300ED0969 /* PersonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A3597208DC3D300ED0969 /* PersonClass.swift */; };
+		99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EF2394208DD2FA00A52449 /* EventPersonCell.swift */; };
+		AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A7668208D957E005CE7EC /* EventPeople.swift */; };
 		ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7D7C92086DEB300547CC1 /* EventClass.swift */; };
 		ADFF0771208D9823001E8C43 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0770208D9823001E8C43 /* Filter.swift */; };
 		ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0772208D9D51001E8C43 /* YourEvents.swift */; };
@@ -60,8 +64,12 @@
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
 		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
-		AD3A7668208D957E005CE7EC /* InterestedFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestedFriends.swift; sourceTree = "<group>"; };
-		AD728ED5208983F10046860A /* YourFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourFriends.swift; sourceTree = "<group>"; };
+		993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		993BF7C2208DBE9E000EB26C /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		997A3597208DC3D300ED0969 /* PersonClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonClass.swift; sourceTree = "<group>"; };
+		99EF2394208DD2FA00A52449 /* EventPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPersonCell.swift; sourceTree = "<group>"; };
+		AD3A7668208D957E005CE7EC /* EventPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPeople.swift; sourceTree = "<group>"; };
 		ADC7D7C92086DEB300547CC1 /* EventClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventClass.swift; sourceTree = "<group>"; };
 		ADFF0770208D9823001E8C43 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
 		ADFF0772208D9D51001E8C43 /* YourEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourEvents.swift; sourceTree = "<group>"; };
@@ -117,19 +125,23 @@
 		8232B7CB207AC56200D0C5AF /* TreeToTree */ = {
 			isa = PBXGroup;
 			children = (
-				AD3A7668208D957E005CE7EC /* InterestedFriends.swift */,
 				8232B7CC207AC56200D0C5AF /* AppDelegate.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
+				9939FFED20840487008348AF /* EventBrowserController.swift */,
+				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
+				AD3A7668208D957E005CE7EC /* EventPeople.swift */,
+				99EF2394208DD2FA00A52449 /* EventPersonCell.swift */,
 				ADFF0776208D9E0D001E8C43 /* YourProfile.swift */,
 				ADFF0774208D9DA3001E8C43 /* YourGroups.swift */,
 				ADFF0772208D9D51001E8C43 /* YourEvents.swift */,
+				993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */,
+				993BF7C2208DBE9E000EB26C /* PersonCell.swift */,
+				993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */,
 				ADFF0770208D9823001E8C43 /* Filter.swift */,
-				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
-				9939FFED20840487008348AF /* EventBrowserController.swift */,
 				ADC7D7C92086DEB300547CC1 /* EventClass.swift */,
-				AD728ED5208983F10046860A /* YourFriends.swift */,
-				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
+				997A3597208DC3D300ED0969 /* PersonClass.swift */,
 				8232B7D3207AC56200D0C5AF /* Assets.xcassets */,
 				8232B7D5207AC56200D0C5AF /* LaunchScreen.storyboard */,
 				8232B7D8207AC56200D0C5AF /* Info.plist */,
@@ -290,13 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADFF0777208D9E0D001E8C43 /* YourProfile.swift in Sources */,
-				AD728ED6208983F10046860A /* YourFriends.swift in Sources */,
+				993BF7C1208DBC94000EB26C /* FriendsTableViewController.swift in Sources */,
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
 				8232B7CD207AC56200D0C5AF /* AppDelegate.swift in Sources */,
 				ADFF0775208D9DA3001E8C43 /* YourGroups.swift in Sources */,
+				993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */,
+				99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */,
 				ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */,
 				ADC7D7CA2086DEB300547CC1 /* EventClass.swift in Sources */,
-				AD3A7669208D957E005CE7EC /* InterestedFriends.swift in Sources */,
+				997A3598208DC3D300ED0969 /* PersonClass.swift in Sources */,
+				AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */,
+				993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */,
 				9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */,
 				9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */,
 				ADFF0771208D9823001E8C43 /* Filter.swift in Sources */,
