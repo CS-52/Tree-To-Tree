@@ -1,5 +1,5 @@
 //
-//  YourProfile.swift
+//  UserProfile.swift
 //  TreeToTree
 //
 //  Created by Austin Chow on 4/22/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class YourProfile: UIViewController {
+class UserProfile: UIViewController {
     
     @IBOutlet weak var userMajor: UILabel!
     @IBOutlet weak var userYear: UILabel!

@@ -177,10 +177,10 @@
             </objects>
             <point key="canvasLocation" x="2300" y="-1285.9070464767617"/>
         </scene>
-        <!--Your Events-->
+        <!--User Groups-->
         <scene sceneID="TVt-91-AsZ">
             <objects>
-                <viewController id="E6R-Rx-p4U" customClass="YourEvents" sceneMemberID="viewController">
+                <viewController id="E6R-Rx-p4U" customClass="UserGroups" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mAj-73-v2G"/>
                         <viewControllerLayoutGuide type="bottom" id="bu4-iD-pwm"/>
@@ -204,10 +204,10 @@
             </objects>
             <point key="canvasLocation" x="-1238" y="-1399"/>
         </scene>
-        <!--View Controller-->
+        <!--User Events-->
         <scene sceneID="o34-AP-27c">
             <objects>
-                <viewController id="Mlw-LU-7oh" sceneMemberID="viewController">
+                <viewController id="Mlw-LU-7oh" customClass="UserEvents" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="yGM-6i-gjg"/>
                         <viewControllerLayoutGuide type="bottom" id="x0k-Q6-jcX"/>
@@ -498,10 +498,10 @@
             </objects>
             <point key="canvasLocation" x="248.80000000000001" y="152.47376311844079"/>
         </scene>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="8O1-c9-lUi">
             <objects>
-                <viewController id="uxr-VI-EPk" sceneMemberID="viewController">
+                <viewController id="uxr-VI-EPk" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Yw7-cH-Fie"/>
                         <viewControllerLayoutGuide type="bottom" id="6zV-2e-Usp"/>
@@ -796,7 +796,7 @@
         <!--Friends-->
         <scene sceneID="GKj-qR-0Ci">
             <objects>
-                <tableViewController title="Friends" id="zH5-WE-qL9" customClass="FriendsTableViewController" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Friends" id="zH5-WE-qL9" customClass="UserFriendsTableViewController" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="luf-0h-AyP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -891,10 +891,10 @@
             </objects>
             <point key="canvasLocation" x="1181.5999999999999" y="1644.8275862068967"/>
         </scene>
-        <!--Your Profile-->
+        <!--User Profile-->
         <scene sceneID="88k-fv-KgX">
             <objects>
-                <viewController id="BYQ-xe-q2y" customClass="YourProfile" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYQ-xe-q2y" customClass="UserProfile" customModule="TreeToTree" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ngZ-u6-tv8"/>
                         <viewControllerLayoutGuide type="bottom" id="Xxe-gF-lQv"/>

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FriendsTableViewController: UITableViewController {
+class UserFriendsTableViewController: UITableViewController {
     
     var friendsArray = [Person]()
     

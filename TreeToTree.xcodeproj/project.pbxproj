@@ -17,17 +17,18 @@
 		9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFEB2083FE17008348AF /* EventPageViewController.swift */; };
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
 		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
-		993BF7C1208DBC94000EB26C /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */; };
+		993BF7C1208DBC94000EB26C /* UserFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C0208DBC94000EB26C /* UserFriendsTableViewController.swift */; };
 		993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C2208DBE9E000EB26C /* PersonCell.swift */; };
 		993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */; };
+		99498723208E78C100C938B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99498722208E78C100C938B4 /* SearchViewController.swift */; };
 		997A3598208DC3D300ED0969 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A3597208DC3D300ED0969 /* Person.swift */; };
 		99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EF2394208DD2FA00A52449 /* EventPersonCell.swift */; };
 		AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3A7668208D957E005CE7EC /* EventPeople.swift */; };
 		ADC7D7CA2086DEB300547CC1 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC7D7C92086DEB300547CC1 /* Event.swift */; };
 		ADFF0771208D9823001E8C43 /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0770208D9823001E8C43 /* Filter.swift */; };
-		ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0772208D9D51001E8C43 /* YourEvents.swift */; };
-		ADFF0775208D9DA3001E8C43 /* YourGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0774208D9DA3001E8C43 /* YourGroups.swift */; };
-		ADFF0777208D9E0D001E8C43 /* YourProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0776208D9E0D001E8C43 /* YourProfile.swift */; };
+		ADFF0773208D9D51001E8C43 /* UserEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0772208D9D51001E8C43 /* UserEvents.swift */; };
+		ADFF0775208D9DA3001E8C43 /* UserGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0774208D9DA3001E8C43 /* UserGroups.swift */; };
+		ADFF0777208D9E0D001E8C43 /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0776208D9E0D001E8C43 /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,17 +65,18 @@
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
 		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
-		993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
+		993BF7C0208DBC94000EB26C /* UserFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFriendsTableViewController.swift; sourceTree = "<group>"; };
 		993BF7C2208DBE9E000EB26C /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
+		99498722208E78C100C938B4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		997A3597208DC3D300ED0969 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		99EF2394208DD2FA00A52449 /* EventPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPersonCell.swift; sourceTree = "<group>"; };
 		AD3A7668208D957E005CE7EC /* EventPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPeople.swift; sourceTree = "<group>"; };
 		ADC7D7C92086DEB300547CC1 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		ADFF0770208D9823001E8C43 /* Filter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Filter.swift; sourceTree = "<group>"; };
-		ADFF0772208D9D51001E8C43 /* YourEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourEvents.swift; sourceTree = "<group>"; };
-		ADFF0774208D9DA3001E8C43 /* YourGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourGroups.swift; sourceTree = "<group>"; };
-		ADFF0776208D9E0D001E8C43 /* YourProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourProfile.swift; sourceTree = "<group>"; };
+		ADFF0772208D9D51001E8C43 /* UserEvents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEvents.swift; sourceTree = "<group>"; };
+		ADFF0774208D9DA3001E8C43 /* UserGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroups.swift; sourceTree = "<group>"; };
+		ADFF0776208D9E0D001E8C43 /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,15 +130,16 @@
 				8232B7CC207AC56200D0C5AF /* AppDelegate.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				99498722208E78C100C938B4 /* SearchViewController.swift */,
 				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
 				9939FFED20840487008348AF /* EventBrowserController.swift */,
 				9939FFEB2083FE17008348AF /* EventPageViewController.swift */,
 				AD3A7668208D957E005CE7EC /* EventPeople.swift */,
 				99EF2394208DD2FA00A52449 /* EventPersonCell.swift */,
-				ADFF0776208D9E0D001E8C43 /* YourProfile.swift */,
-				ADFF0774208D9DA3001E8C43 /* YourGroups.swift */,
-				ADFF0772208D9D51001E8C43 /* YourEvents.swift */,
-				993BF7C0208DBC94000EB26C /* FriendsTableViewController.swift */,
+				ADFF0776208D9E0D001E8C43 /* UserProfile.swift */,
+				ADFF0774208D9DA3001E8C43 /* UserGroups.swift */,
+				ADFF0772208D9D51001E8C43 /* UserEvents.swift */,
+				993BF7C0208DBC94000EB26C /* UserFriendsTableViewController.swift */,
 				993BF7C2208DBE9E000EB26C /* PersonCell.swift */,
 				993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */,
 				ADFF0770208D9823001E8C43 /* Filter.swift */,
@@ -301,14 +304,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADFF0777208D9E0D001E8C43 /* YourProfile.swift in Sources */,
-				993BF7C1208DBC94000EB26C /* FriendsTableViewController.swift in Sources */,
+				ADFF0777208D9E0D001E8C43 /* UserProfile.swift in Sources */,
+				993BF7C1208DBC94000EB26C /* UserFriendsTableViewController.swift in Sources */,
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
+				99498723208E78C100C938B4 /* SearchViewController.swift in Sources */,
 				8232B7CD207AC56200D0C5AF /* AppDelegate.swift in Sources */,
-				ADFF0775208D9DA3001E8C43 /* YourGroups.swift in Sources */,
+				ADFF0775208D9DA3001E8C43 /* UserGroups.swift in Sources */,
 				993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */,
 				99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */,
-				ADFF0773208D9D51001E8C43 /* YourEvents.swift in Sources */,
+				ADFF0773208D9D51001E8C43 /* UserEvents.swift in Sources */,
 				ADC7D7CA2086DEB300547CC1 /* Event.swift in Sources */,
 				997A3598208DC3D300ED0969 /* Person.swift in Sources */,
 				AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */,
