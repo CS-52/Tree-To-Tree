@@ -14,6 +14,7 @@
 		8232B7D7207AC56200D0C5AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8232B7D5207AC56200D0C5AF /* LaunchScreen.storyboard */; };
 		8232B7E2207AC56300D0C5AF /* TreeToTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232B7E1207AC56300D0C5AF /* TreeToTreeTests.swift */; };
 		8232B7ED207AC56300D0C5AF /* TreeToTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */; };
+		82F2DDF8208FCF6D00196C9B /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82F2DDF7208FCF6D00196C9B /* Search.swift */; };
 		9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFEB2083FE17008348AF /* EventPageViewController.swift */; };
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
 		9939FFF320842F23008348AF /* EventBrowserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFF120842F23008348AF /* EventBrowserCell.swift */; };
@@ -62,6 +63,7 @@
 		8232B7E8207AC56300D0C5AF /* TreeToTreeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreeToTreeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeToTreeUITests.swift; sourceTree = "<group>"; };
 		8232B7EE207AC56300D0C5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82F2DDF7208FCF6D00196C9B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
 		9939FFED20840487008348AF /* EventBrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserController.swift; sourceTree = "<group>"; };
 		9939FFF120842F23008348AF /* EventBrowserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventBrowserCell.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				8232B7CC207AC56200D0C5AF /* AppDelegate.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				82F2DDF7208FCF6D00196C9B /* Search.swift */,
 				99498722208E78C100C938B4 /* SearchViewController.swift */,
 				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
 				9939FFED20840487008348AF /* EventBrowserController.swift */,
@@ -313,6 +316,7 @@
 				993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */,
 				99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */,
 				ADFF0773208D9D51001E8C43 /* UserEvents.swift in Sources */,
+				82F2DDF8208FCF6D00196C9B /* Search.swift in Sources */,
 				ADC7D7CA2086DEB300547CC1 /* Event.swift in Sources */,
 				997A3598208DC3D300ED0969 /* Person.swift in Sources */,
 				AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */,
