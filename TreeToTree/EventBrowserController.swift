@@ -33,7 +33,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
-            filter.isHidden = false;
+            filter.isHidden = true;
 
             tableView.isUserInteractionEnabled = true;
         } else {
@@ -55,8 +55,6 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
-            filter.isHidden = false;
-
             tableView.isUserInteractionEnabled = true;
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
