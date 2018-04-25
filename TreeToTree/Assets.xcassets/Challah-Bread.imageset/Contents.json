@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Challah-Bread.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Challah-Bread.jpg",
       "scale" : "2x"
     },
     {
