@@ -13,10 +13,12 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var sideMenuImage: UIImageView!
     @IBOutlet weak var searchIcon: UIBarButtonItem!
     
+    @IBOutlet weak var goBackButton: UIButton!
     @IBOutlet var mainView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
    
+    @IBOutlet weak var filter: UIButton!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
@@ -31,11 +33,15 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
+            filter.isHidden = false;
 
+            tableView.isUserInteractionEnabled = true;
         } else {
-        leadingConstraint.constant = 250
-        trailingConstraint.constant = -250
-        EventBrowswer.layer.opacity = 0.3
+            leadingConstraint.constant = 250
+            trailingConstraint.constant = -250
+            EventBrowswer.layer.opacity = 0.3
+            filter.isHidden = true;
+            tableView.isUserInteractionEnabled = false;
         }
         UIView.animate(withDuration: 0.3, animations: {
             self.view.layoutIfNeeded()
@@ -44,13 +50,27 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     }
     
     
+    @IBAction func goBack(_ sender: Any) {
+        if(menuShowing) {
+            leadingConstraint.constant = 0
+            trailingConstraint.constant = 0
+            EventBrowswer.layer.opacity = 1
+            filter.isHidden = false;
+
+            tableView.isUserInteractionEnabled = true;
+            UIView.animate(withDuration: 0.3, animations: {
+                self.view.layoutIfNeeded()
+            })
+            menuShowing = !menuShowing
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         mainView.layer.shadowOpacity = 1
         mainView.layer.shadowRadius = 10
-
         
         self.sideMenuImage.layer.cornerRadius = self.sideMenuImage.frame.size.width / 2;
         
@@ -80,10 +100,11 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         cell.shifts.text = event.shifts
         cell.peopleGoing.text = event.people
         //cell.interest.interest = event.interest
+  
         
         return cell
         
-        
+    
         
 //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         

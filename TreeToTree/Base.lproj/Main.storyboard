@@ -435,12 +435,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-YJ-saQ">
-                                <rect key="frame" x="249" y="0.0" width="1" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xfw-MX-dAa">
                                 <rect key="frame" x="0.0" y="0.0" width="250" height="559"/>
                                 <subviews>
@@ -522,6 +516,12 @@
                                     <constraint firstItem="Yhh-rR-1J7" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="top" constant="35" id="xIL-WY-8cD"/>
                                     <constraint firstItem="zhc-1r-Krs" firstAttribute="centerX" secondItem="Xfw-MX-dAa" secondAttribute="centerX" id="yQc-Vf-IQj"/>
                                 </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9GF-YJ-saQ">
+                                <rect key="frame" x="249" y="0.0" width="1" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jpx-x8-RUN">
                                 <rect key="frame" x="0.0" y="28" width="375" height="531"/>
@@ -636,15 +636,31 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9im-Lu-Iuo">
+                                <rect key="frame" x="250" y="0.0" width="125" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Kd-vhL">
                                 <rect key="frame" x="295" y="0.0" width="80" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="0Kt-Dm-E8c"/>
                                     <constraint firstAttribute="width" constant="80" id="Drw-kz-fNh"/>
                                 </constraints>
-                                <state key="normal" title="Filter"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="15"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleColor" red="0.41134214400000002" green="0.86638218160000002" blue="0.72766351699999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <segue destination="at7-p1-yDB" kind="presentation" id="b0Y-Zb-tQI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-Oy-uwz">
+                                <rect key="frame" x="226" y="0.0" width="149" height="603"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="goBack:" destination="F8n-I7-dK2" eventType="touchUpInside" id="OWl-Q3-59h"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -677,6 +693,8 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="EventBrowswer" destination="Jpx-x8-RUN" id="Mev-B7-Mmx"/>
+                        <outlet property="filter" destination="81S-Kd-vhL" id="xJG-g3-0Ve"/>
+                        <outlet property="goBackButton" destination="eJv-Oy-uwz" id="3Ql-Bl-2Vc"/>
                         <outlet property="leadingConstraint" destination="5dn-NP-PrC" id="n0r-qI-LpA"/>
                         <outlet property="mainView" destination="UPS-Yj-EYg" id="YeD-UT-uv4"/>
                         <outlet property="searchIcon" destination="05A-H4-3iL" id="NQL-xh-y4R"/>
@@ -1435,16 +1453,16 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Challah-Bread" width="849" height="565"/>
+        <image name="Challah-Bread" width="424" height="282"/>
         <image name="Mehran" width="100" height="100"/>
         <image name="afriendlyface" width="390" height="390"/>
-        <image name="austinchow" width="1106" height="1509"/>
+        <image name="austinchow" width="553" height="754"/>
         <image name="heartOutline" width="28" height="26"/>
         <image name="left-arrow" width="22" height="22"/>
         <image name="menu" width="18" height="15"/>
         <image name="monkeyLogoNew" width="300" height="292"/>
-        <image name="psycho" width="1100" height="739"/>
+        <image name="psycho" width="550" height="369"/>
         <image name="search" width="19" height="19"/>
-        <image name="suzannejoh" width="3648" height="5472"/>
+        <image name="suzannejoh" width="1824" height="2736"/>
     </resources>
 </document>
