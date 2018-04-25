@@ -15,11 +15,7 @@ class Search: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        loadCategoryArray()
-        
-        let searchController = UISearchController(searchResultsController: nil)
-        
+  
         
     }
     
@@ -28,22 +24,7 @@ class Search: UIViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func loadCategoryArray(){
-        searchArray = [
-            "Challah",
-            "Breakfast Feed",
-            "Homeless",
-            "Cooking",
-            "Translate"
-        ]
-    }
+
     
 }
 
-extension Search: UISearchResultsUpdating{
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        <#code#>
-    }
-    
-}
