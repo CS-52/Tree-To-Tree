@@ -1,0 +1,6 @@
+framework module Pods_TreeToTreeUITests {
+  umbrella header "Pods-TreeToTreeUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
