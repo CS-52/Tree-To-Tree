@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 class CreateEvents {
     class func addEvents() {
@@ -16,12 +17,12 @@ class CreateEvents {
         //EVENT 0
         let name = "Challah Bake"
         let date = Date.init()
-        let location = CLLocation(37.42, -122.17)
+        let location = CLLocation(latitude: 37.42, longitude:-122.17)
         
-        let eventInfo1 = [
-            "name" = name,
-            "date" = date,
-            "location" = location
+        let eventInfo1: [String: Any] = [
+            "name": name,
+            "date": date,
+            "location": location
         ]
     }
 }

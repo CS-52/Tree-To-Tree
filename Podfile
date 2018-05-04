@@ -7,6 +7,7 @@ target 'TreeToTree' do
 
   # Pods for TreeToTree
 pod 'Firebase/Core'
+pod 'Firebase/Database'
   target 'TreeToTreeTests' do
     inherit! :search_paths
     # Pods for testing

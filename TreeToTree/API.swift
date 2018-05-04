@@ -8,10 +8,9 @@
 
 import Foundation
 import FirebaseDatabase
-import FirebaseStorage
 
 class API {
-    static let databaseReference: FIRDatabaseReference = FIRDatabase.database().reference()
+    static let databaseReference: DatabaseReference = Database.database().reference()
     static let eventsReference = databaseReference.child("events")
     
 }
