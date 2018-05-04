@@ -19,11 +19,13 @@ class CreateEvents {
         let date = Date.init()
         let location = CLLocation(latitude: 37.42, longitude:-122.17)
         
-        let eventInfo1: [String: Any] = [
+        let eventInfo0: [String: Any] = [
             "name": name,
             "date": date,
             "location": location
         ]
+        
+        API.createEventWithKey(eventIDs[0], eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
     }
 }
 

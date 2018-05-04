@@ -13,4 +13,13 @@ class API {
     static let databaseReference: DatabaseReference = Database.database().reference()
     static let eventsReference = databaseReference.child("events")
     
+    class func createEventWithKey(_ key: String, eventInfo: Dictionary<String, AnyObject>) -> Event {
+        let eventReference = eventsReference.child(key)
+        eventReference.setValue(eventInfo)
+        return Event(key: key, dictionary: eventInfo)
+    
+    }
+    
 }
+
+
