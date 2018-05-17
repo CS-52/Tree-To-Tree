@@ -19,10 +19,13 @@ class CreateEvents {
         let date = Date.init()
         let location = CLLocation(latitude: 37.42, longitude:-122.17)
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE MMMM d, y h:mm"
+        
         let eventInfo0: [String: Any] = [
             "name": name,
-            "date": date,
-            "location": location
+            "date": dateFormatter.string(from: date),
+            "location": "Hillel"
         ]
         
         API.createEventWithKey(eventIDs[0], eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
