@@ -10,19 +10,19 @@ import UIKit
 import Foundation
 import CoreLocation
 
-class Event  {
-    var key: String!
+struct Event  {
+    //var key: String!
     
     var name: String!
-    var date: Date!
-    var location: CLLocation? //cl location class for ios
-    //let shifts: String! //table within event
-    //let image: UIImage!
-    //let people: String! //interested, going
+    var date: String!//Date
+    var location: String? //cl location class for ios
+    let shifts: String! //table within event
+    let image: UIImage!
+    let people: String! //interested, going
     
     //additional things needed: people interested, people going, about, location, organization, fix shifts and people so they are not strings
     
-    init(key: String, dictionary: Dictionary<String, AnyObject>){
+    /*init(key: String, dictionary: Dictionary<String, AnyObject>){
         self.key = key
         
         if let name = dictionary["name"] as? String{
@@ -38,6 +38,6 @@ class Event  {
         }
         
         
-    }
+    }*/
 }
 

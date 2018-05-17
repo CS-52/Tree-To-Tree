@@ -30,6 +30,8 @@ class EventPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         nameLabel.text = arrayElem?.name
         dateLabel.text = arrayElem?.date
         eventImage.image = arrayElem?.image
