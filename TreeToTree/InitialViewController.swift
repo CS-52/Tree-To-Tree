@@ -12,7 +12,7 @@ class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        CreateEvents.addEvents()
+        //CreateEvents.addEvents()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
