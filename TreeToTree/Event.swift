@@ -17,10 +17,12 @@ class Event  {
     var name: String!
     var date: String!//Date
     var location: String? //cl location class for ios
-    let shifts: Dictionary<String, Dictionary<String, [String]>>!//table within event
-    let image: UIImage!
-    let interestedIDs: [String]!
-    let goingIDs: Dictionary<String, Dictionary<String, [String]>>!
+    var shifts: Dictionary<String, Dictionary<String, [String]>>!//table within event
+    var image: UIImage!
+    var interestedIDs: [String]!
+    var goingIDs: Dictionary<String, Dictionary<String, [String]>>!
+    var description: String!
+    var organization: String!
     
     //additional things needed: people interested, people going, about, location, organization, fix shifts and people so they are not strings
     
@@ -57,6 +59,12 @@ class Event  {
             self.goingIDs = goingIDs;
         }else{
             self.goingIDs = Dictionary<String, Dictionary<String, [String]>>();
+        }
+        if let description = dictionary["description"] as? String{
+            self.description = description
+        }
+        if let organization = dictionary["organization"] as? String{
+            self.organization = organization
         }
     }
 }

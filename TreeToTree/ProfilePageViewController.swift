@@ -14,7 +14,7 @@ class ProfilePageViewController: UIViewController {
     @IBOutlet weak var profileName: UILabel!
     
     //var arrayElem:String?
-    var person:Person?
+    var person:User?
     
     override func viewDidLoad() {
         

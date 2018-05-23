@@ -10,11 +10,11 @@ import UIKit
 
 class UserFriendsTableViewController: UITableViewController {
     
-    var friendsArray = [Person]()
+    var friendsArray = [User]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadSamplePeople();
+        //loadSamplePeople();
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -108,7 +108,7 @@ class UserFriendsTableViewController: UITableViewController {
         performSegue(withIdentifier: "segueToProfile", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
+    /*
     private func loadSamplePeople() {
         //let photo = UIImage(named: "austinchow")
         let person1 = Person(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
@@ -121,5 +121,6 @@ class UserFriendsTableViewController: UITableViewController {
         
         
     }
+    */
 
 }
