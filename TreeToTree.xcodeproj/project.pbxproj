@@ -26,7 +26,7 @@
 		993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C2208DBE9E000EB26C /* PersonCell.swift */; };
 		993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */; };
 		99498723208E78C100C938B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99498722208E78C100C938B4 /* SearchViewController.swift */; };
-		997A3598208DC3D300ED0969 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A3597208DC3D300ED0969 /* Person.swift */; };
+		997A3598208DC3D300ED0969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A3597208DC3D300ED0969 /* User.swift */; };
 		99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EF2394208DD2FA00A52449 /* EventPersonCell.swift */; };
 		99FE475C2099608A00A3E30A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE475B2099608A00A3E30A /* API.swift */; };
 		99FE475E209960FD00A3E30A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 99FE475D209960FC00A3E30A /* GoogleService-Info.plist */; };
@@ -84,7 +84,6 @@
 		8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeToTreeUITests.swift; sourceTree = "<group>"; };
 		8232B7EE207AC56300D0C5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		829C4C6420B4C06100FFA85D /* CreateUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsers.swift; sourceTree = "<group>"; };
-		82F2DDF7208FCF6D00196C9B /* Search.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
 		98E33B3C4435D73C892D99C0 /* Pods_TreeToTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreeToTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990FF78820B50D1C00B94079 /* ShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +93,7 @@
 		993BF7C2208DBE9E000EB26C /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
 		993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		99498722208E78C100C938B4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
-		997A3597208DC3D300ED0969 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		997A3597208DC3D300ED0969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99EF2394208DD2FA00A52449 /* EventPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPersonCell.swift; sourceTree = "<group>"; };
 		99FE475B2099608A00A3E30A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		99FE475D209960FC00A3E30A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -184,7 +183,6 @@
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
 				AD93DFC32092B8F200E091D8 /* GroupPageViewController.swift */,
 				AD93DFC52092C59B00E091D8 /* GroupPageCell.swift */,
-				82F2DDF7208FCF6D00196C9B /* Search.swift */,
 				99498722208E78C100C938B4 /* SearchViewController.swift */,
 				9939FFF120842F23008348AF /* EventBrowserCell.swift */,
 				990FF78820B50D1C00B94079 /* ShiftCell.swift */,
@@ -201,7 +199,7 @@
 				993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */,
 				ADFF0770208D9823001E8C43 /* Filter.swift */,
 				ADC7D7C92086DEB300547CC1 /* Event.swift */,
-				997A3597208DC3D300ED0969 /* Person.swift */,
+				997A3597208DC3D300ED0969 /* User.swift */,
 				8232B7D3207AC56200D0C5AF /* Assets.xcassets */,
 				8232B7D5207AC56200D0C5AF /* LaunchScreen.storyboard */,
 				99FE475D209960FC00A3E30A /* GoogleService-Info.plist */,
@@ -477,10 +475,9 @@
 				993BF7C3208DBE9E000EB26C /* PersonCell.swift in Sources */,
 				99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */,
 				ADFF0773208D9D51001E8C43 /* UserEvents.swift in Sources */,
-				82F2DDF8208FCF6D00196C9B /* Search.swift in Sources */,
 				ADC7D7CA2086DEB300547CC1 /* Event.swift in Sources */,
 				99FE475C2099608A00A3E30A /* API.swift in Sources */,
-				997A3598208DC3D300ED0969 /* Person.swift in Sources */,
+				997A3598208DC3D300ED0969 /* User.swift in Sources */,
 				AD3A7669208D957E005CE7EC /* EventPeople.swift in Sources */,
 				990FF78920B50D1C00B94079 /* ShiftCell.swift in Sources */,
 				993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */,

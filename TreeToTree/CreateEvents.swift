@@ -40,6 +40,8 @@ class CreateEvents {
                 "shifts": ["0001"]
             ]
         ]
+        let description1 = "Come bake some challah!\n It's gonna be lit"
+        let organization1 = "Challah for Hunger"
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE MMMM d, y h:mm"
@@ -50,7 +52,9 @@ class CreateEvents {
             "location": location1,
             "shifts": shifts1,
             "goingIDs": goingIDs1,
-            "interestedIDs": interestedIDs1
+            "interestedIDs": interestedIDs1,
+            "description": description1,
+            "organization": organization1
         ]
         
         API.createEventWithKey(eventIDs[0], eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
