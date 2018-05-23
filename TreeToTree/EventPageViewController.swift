@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventPageViewController: UIViewController {
+class EventPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var eventSummary: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
