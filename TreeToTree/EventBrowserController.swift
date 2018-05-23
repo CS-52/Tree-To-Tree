@@ -26,7 +26,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var EventBrowswer: UIStackView!
     var menuShowing = false
     
-    var eventsArray = [Event]()
+    var eventsArray = [Event](){didSet{tableView.reloadData()}}
     
     @IBAction func showMenu(_ sender: Any) {
         if (menuShowing) {
@@ -72,7 +72,10 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         
         self.sideMenuImage.layer.cornerRadius = self.sideMenuImage.frame.size.width / 2;
         
-        loadSampleEvents()
+        //loadSampleEvents()
+        API.getEventWithKey("0000", completed: {event in
+            self.eventsArray.append(event!)
+        })
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         
@@ -95,8 +98,8 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         cell.eventImage.image = event.image
         cell.date.text = event.date
         cell.eventName.text = event.name
-        cell.shifts.text = event.shifts
-        cell.peopleGoing.text = event.people
+        cell.shifts.text = "\(event.shifts.count) shifts available."
+        cell.peopleGoing.text = "\(event.goingIDs.count) people going."
         //cell.interest.interest = event.interest
   
         
@@ -127,6 +130,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         }
     }
     
+    /*
     private func loadSampleEvents() {
         //let photo = UIImage(named: "Challah-Bread")
         let event1 = Event(name: "Challah Bake", date: "Sunday April 15th, 4:30 - 7:30 PM", location: "Hillel", shifts: "3 shifts available", image: #imageLiteral(resourceName: "Challah-Bread"), people: "Jose, Michelle, Julie, and 5 others")
@@ -139,7 +143,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
        eventsArray += [event1, event2, event3]
         
         
-    }
+    }*/
     
     
     @IBAction func unwindToEventBrowser(segue:UIStoryboardSegue) { }

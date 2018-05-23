@@ -12,7 +12,8 @@ class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //CreateEvents.addEvents()
+        CreateEvents.addEvents()
+        CreateUsers.addUsers()
         // Do any additional setup after loading the view, typically from a nib.
     }
 

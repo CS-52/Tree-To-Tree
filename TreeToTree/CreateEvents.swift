@@ -15,20 +15,46 @@ class CreateEvents {
         let eventIDs = ["0000", "0001", "0002", "0003"]
         
         //EVENT 0
-        let name = "Challah Bake"
-        let date = Date.init()
-        let location = CLLocation(latitude: 37.42, longitude:-122.17)
+        let name1 = "Challah Bake"
+        let date1 = Date.init()
+        let location1 = "Hillel"
+        let shifts1 = [
+            "0000": [
+                "name": "Dough-Making",
+                "start time": "6:00 pm",
+                "end time": "7:20 pm"
+            ],
+            "0001": [
+                "name": "Baking",
+                "start time": "7:30 pm",
+                "end time": "9:00 pm",
+            ]
+        ]
+        
+        let interestedIDs1=[String]()
+        let goingIDs1 = [
+            "0000": [
+                "shifts": ["0000", "0001"]
+            ],
+            "0001": [
+                "shifts": ["0001"]
+            ]
+        ]
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE MMMM d, y h:mm"
         
         let eventInfo0: [String: Any] = [
-            "name": name,
-            "date": dateFormatter.string(from: date),
-            "location": "Hillel"
+            "name": name1,
+            "date": dateFormatter.string(from: date1),
+            "location": location1,
+            "shifts": shifts1,
+            "goingIDs": goingIDs1,
+            "interestedIDs": interestedIDs1
         ]
         
         API.createEventWithKey(eventIDs[0], eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
+        
     }
 }
 
