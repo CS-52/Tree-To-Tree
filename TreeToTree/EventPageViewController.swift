@@ -46,6 +46,71 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return eventsArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cellIdentifier = "EventBrowserCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventBrowserCell  else {
+            fatalError("The dequeued cell is not an instance of EventBrowserCell.")
+        }
+        
+        let event = eventsArray[indexPath.row]
+        cell.eventImage.image = event.image
+        cell.date.text = event.date
+        cell.eventName.text = event.name
+        cell.shifts.text = "\(event.shifts.count) shifts available."
+        cell.peopleGoing.text = "\(event.goingIDs.count) people going."
+        //cell.interest.interest = event.interest
+        
+        
+        return cell
+        
+        
+        
+        //        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        
+        // Configure the cell...
+        //        cell.textLabel?.text = eventsArray[indexPath.row]
+        //        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let selectedIndex = indexPath.row //what user taps on
+        performSegue(withIdentifier: "segue", sender: self)
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        
+        
+    }
+    
+    //SEGUE STUFF
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EventPageViewController {
+            destination.arrayElem = eventsArray[(tableView.indexPathForSelectedRow?.row)!]
+        }
+    }
+    
+    
+     private func loadSampleShifts() {
+     //let photo = UIImage(named: "Challah-Bread")
+        let shift1 = Shift(name: "Dough Making", start: "6:00 PM", end: "7:20 PM")
+     
+     
+     let event2 = Event(name: "Challah Bake", date: "Sunday April 15th, 4:30 - 7:30 PM", location: "Hillel", shifts: "3 shifts available", image: #imageLiteral(resourceName: "Challah-Bread"), people: "Jose, Michelle, Julie, and 5 others")
+     
+     let event3 = Event(name: "Challah Bake", date: "Sunday April 15th, 4:30 - 7:30 PM", location: "Hillel", shifts: "3 shifts available", image: #imageLiteral(resourceName: "Challah-Bread"), people: "Jose, Michelle, Julie, and 5 others")
+     
+     eventsArray += [event1, event2, event3]
+     
+     
+     }
+    
 }
 
 
