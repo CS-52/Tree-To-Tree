@@ -57,7 +57,7 @@ class CreateEvents {
             "organization": organization1
         ]
         
-        API.createEventWithKey(eventIDs[0], eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
+        API.createEvent(eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
         
     }
 }

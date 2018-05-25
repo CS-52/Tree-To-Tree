@@ -14,8 +14,8 @@ class API {
     static let eventsReference = databaseReference.child("events")
     static let usersReference = databaseReference.child("users")
     
-    class func createEventWithKey(_ key: String, eventInfo: Dictionary<String, AnyObject>) /*-> Event*/ {
-        let eventReference = eventsReference.child(key)
+    class func createEvent(eventInfo: Dictionary<String, AnyObject>) /*-> Event*/ {
+        let eventReference = eventsReference.childByAutoId()
         eventReference.setValue(eventInfo)
         return //Event(key: key, dictionary: eventInfo)
     }
@@ -37,6 +37,23 @@ class API {
             
             completed?(event)
         })
+    }
+    
+    class func getEvents(completed:(([Event])->Void)?){
+        eventsReference.observeSingleEvent(of: .value, with: {snapshot in
+            var events: [Event] = []
+            
+            if let dictionary = snapshot.value as? Dictionary<String, Dictionary<String, AnyObject>> {
+                NSLog("printing the dictionary used to create a new Event")
+                NSLog(String(describing: dictionary))
+                for eventKey in dictionary.keys{
+                    let event = Event(key: eventKey, dictionary: dictionary[eventKey]!)
+                    events.append(event)
+                }
+            }
+            
+            completed?(events)
+        })//look into live updating
     }
     
     class func getUserWithKey(_ key: String, completed: ((User?) -> Void)?) {

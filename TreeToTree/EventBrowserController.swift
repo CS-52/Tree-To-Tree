@@ -73,8 +73,13 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         self.sideMenuImage.layer.cornerRadius = self.sideMenuImage.frame.size.width / 2;
         
         //loadSampleEvents()
-        API.getEventWithKey("0000", completed: {event in
-            self.eventsArray.append(event!)
+        API.getEvents(completed: {events in
+
+     
+            print("got events")
+            print(events)
+            self.eventsArray = events
+            
         })
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

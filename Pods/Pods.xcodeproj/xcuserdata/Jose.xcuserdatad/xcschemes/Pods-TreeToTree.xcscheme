@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBFC2EACFF1BFCC05C09CE9EAD11FABD"
+               BlueprintIdentifier = "2D3DDA0C774D28FE6612BAD42EB08E13"
                BuildableName = "Pods_TreeToTree.framework"
                BlueprintName = "Pods-TreeToTree"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FBFC2EACFF1BFCC05C09CE9EAD11FABD"
+            BlueprintIdentifier = "2D3DDA0C774D28FE6612BAD42EB08E13"
             BuildableName = "Pods_TreeToTree.framework"
             BlueprintName = "Pods-TreeToTree"
             ReferencedContainer = "container:Pods.xcodeproj">
