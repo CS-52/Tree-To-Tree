@@ -105,8 +105,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         cell.eventName.text = event.name
         cell.shifts.text = "\(event.shifts.count) shifts available."
         cell.peopleGoing.text = "\(event.goingIDs.count) people going."
-        //cell.interest.interest = event.interest
-  
+    
         
         return cell
         

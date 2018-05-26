@@ -942,7 +942,7 @@
                                                     <constraint firstAttribute="height" constant="200" id="We5-P6-V9Z"/>
                                                 </constraints>
                                             </imageView>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAO-AP-h7l" customClass="ShiftBrowser">
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAO-AP-h7l">
                                                 <rect key="frame" x="0.0" y="605" width="375" height="800"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
@@ -1202,6 +1202,7 @@
                         <outlet property="locationLabel" destination="ll7-tG-s4y" id="Te0-59-YBh"/>
                         <outlet property="nameLabel" destination="gaZ-cY-1y8" id="Oz6-0h-C15"/>
                         <outlet property="orgLabel" destination="btM-SZ-KBv" id="nb3-iB-6XD"/>
+                        <outlet property="shiftsTableView" destination="GAO-AP-h7l" id="dOc-BG-BWc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaw-Mg-ZWr" userLabel="First Responder" sceneMemberID="firstResponder"/>
