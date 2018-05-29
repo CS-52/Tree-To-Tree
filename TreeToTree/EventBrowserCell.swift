@@ -33,6 +33,8 @@ class EventBrowserCell: UITableViewCell {
         
         //show up as filled for events already in user's list
         
+        //set isSelected through backend
+        
     }
     
     

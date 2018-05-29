@@ -56,6 +56,7 @@ class API {
         })//look into live updating
     }
     
+    
     class func getUserWithKey(_ key: String, completed: ((User?) -> Void)?) {
         usersReference.child(key).observeSingleEvent(of: .value, with: { snapshot in
             var event: User?
