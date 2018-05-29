@@ -46,10 +46,16 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
         self.friend4.layer.cornerRadius = self.friend1.frame.size.width / 2;
         self.friend5.layer.cornerRadius = self.friend1.frame.size.width / 2;
         
+        //populate shifts
         for shiftKey in (arrayElem?.shifts.keys)! {
             let shift = Shift(key: shiftKey, dictionary: (arrayElem?.shifts[shiftKey]!)!)
             shifts.append(shift)
         }
+        
+        //adjust size of description label
+//        let maxSize = CGSize(width: 359, height: 1000)
+//        let size = eventSummary.sizeThatFits(maxSize)
+//        eventSummary.frame = CGRect(size: size)
     }
     
     override func didReceiveMemoryWarning() {

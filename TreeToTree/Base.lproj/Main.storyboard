@@ -944,7 +944,7 @@
                                                 </constraints>
                                             </imageView>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GAO-AP-h7l">
-                                                <rect key="frame" x="0.0" y="605" width="375" height="800"/>
+                                                <rect key="frame" x="0.0" y="451.5" width="375" height="800"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="800" id="vlu-wh-L3H"/>
@@ -1053,7 +1053,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shifts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7PU-Xw-h56">
-                                                <rect key="frame" x="8" y="573" width="359" height="32"/>
+                                                <rect key="frame" x="8" y="419.5" width="359" height="32"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="32" id="eSp-RY-S6N"/>
                                                 </constraints>
@@ -1104,12 +1104,8 @@
                                                     <constraint firstAttribute="height" constant="44" id="LJQ-wa-0Dl"/>
                                                 </constraints>
                                             </stackView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-uP-HPR">
-                                                <rect key="frame" x="8" y="388" width="359" height="185"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="185" id="Tej-fW-eGv"/>
-                                                </constraints>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda. Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sup" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jia-uP-HPR">
+                                                <rect key="frame" x="8" y="388" width="359" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1144,7 +1140,7 @@
                                             <constraint firstItem="md6-tA-Iy6" firstAttribute="top" secondItem="btM-SZ-KBv" secondAttribute="bottom" id="IgB-by-lBf"/>
                                             <constraint firstAttribute="trailing" secondItem="onh-YY-2yB" secondAttribute="trailing" constant="124" id="MuJ-Ef-j1o"/>
                                             <constraint firstAttribute="trailing" secondItem="grA-KY-8Hc" secondAttribute="trailing" constant="8" id="OCV-Pq-za4"/>
-                                            <constraint firstItem="7PU-Xw-h56" firstAttribute="top" secondItem="Jia-uP-HPR" secondAttribute="bottom" id="RJS-TU-7AQ"/>
+                                            <constraint firstItem="7PU-Xw-h56" firstAttribute="top" secondItem="Jia-uP-HPR" secondAttribute="bottom" constant="8" id="RJS-TU-7AQ"/>
                                             <constraint firstItem="gaZ-cY-1y8" firstAttribute="top" secondItem="jjx-Ny-r8n" secondAttribute="top" id="SA0-14-fBH"/>
                                             <constraint firstItem="GAO-AP-h7l" firstAttribute="leading" secondItem="jjx-Ny-r8n" secondAttribute="leading" id="SmX-FN-2qy"/>
                                             <constraint firstItem="dkY-ym-KIv" firstAttribute="top" secondItem="onh-YY-2yB" secondAttribute="bottom" id="XQZ-Kb-Atb"/>
