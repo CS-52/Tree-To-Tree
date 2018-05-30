@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
   
+    @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
     @IBOutlet weak var major: UITextField!
@@ -30,8 +31,8 @@ class SignUpViewController: UIViewController {
             ]
             API.signUpUser(userInfo: userInfo)
             //SEGUE
-            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
-            self.present(navigationController, animated: false)
+            let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin") as! UIViewController
+            self.present(tutorialController, animated: true)
         }
     }
     override func viewDidLoad() {

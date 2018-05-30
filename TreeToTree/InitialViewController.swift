@@ -38,6 +38,22 @@ class InitialViewController: UIViewController {
     
     @IBAction func unwindToInitialViewController(segue:UIStoryboardSegue) { }
     
+    @IBAction func unwindFromLogOut(segue: UIStoryboardSegue) {
+        // segue back
+    }
+    
+    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+        
+        if let id = identifier {
+            if id == "logout" {
+                let unwindSegue = UnwindRightToLeft(identifier: id, source: fromViewController, destination: toViewController)
+                return unwindSegue
+            }
+        }
+        
+        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
+    }
+    
 
 }
 

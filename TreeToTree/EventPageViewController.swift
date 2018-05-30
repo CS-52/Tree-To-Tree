@@ -40,6 +40,9 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
         dateLabel.text = arrayElem?.date
         eventSummary.text = arrayElem?.description
         eventImage.image = arrayElem?.image
+        orgLabel.text = arrayElem?.organization
+        locationLabel.text = arrayElem?.location
+        
         self.friend1.layer.cornerRadius = self.friend1.frame.size.width / 2;
         self.friend2.layer.cornerRadius = self.friend1.frame.size.width / 2;
         self.friend3.layer.cornerRadius = self.friend1.frame.size.width / 2;
