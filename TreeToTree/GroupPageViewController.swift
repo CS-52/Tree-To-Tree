@@ -8,15 +8,31 @@
 
 import UIKit
 
-class GroupPageViewController: UITableViewController {
+class GroupPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var groupsArray = [User]()
 
+    
+    struct Group {
+        var name: String;
+        var image: UIImage;
+    }
+    
+    @IBOutlet var tableView: UITableView!
+    
+    var groupsArray = [Group]() {
+        didSet {
+            tableView.reloadData()
+            
+        }
+    }
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        //loadSampleGroups()
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        loadSampleGroups()
        
     }
     
@@ -25,13 +41,13 @@ class GroupPageViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return groupsArray.count
     }
+ 
     
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cellIdentifier = "GroupCell"
 
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? GroupPageCell  else {
@@ -40,24 +56,31 @@ class GroupPageViewController: UITableViewController {
         
         let group = groupsArray[indexPath.row]
         cell.groupPhoto.image = group.image
-        cell.groupName.text = group.firstName
+        cell.groupPhoto.layer.cornerRadius = cell.groupPhoto.frame.width / 2
+        cell.groupPhoto.clipsToBounds = true
+        cell.groupName.text = group.name
         
         return cell
     }
-    /*
+    
+   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Change the selected background view of the cell.
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
     private func loadSampleGroups() {
-        //let photo = UIImage(named: "austinchow")
-        let person1 = User(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
-        let person2 = User(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
-        let person3 = User(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
-        let person4 = User(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
-        let person5 = User(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
+        let photo = UIImage(named: "afriendlyface")
+        let group1 = Group(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
+        let group2 = Group(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
+        let group3 = Group(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
+        let group4 = Group(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
+        let group5 = Group(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
         
-        groupsArray += [person1, person2, person3, person4, person5]
+        groupsArray += [group1, group2, group3, group4, group5]
         
         
     }
-     */
+    
     
     
 }

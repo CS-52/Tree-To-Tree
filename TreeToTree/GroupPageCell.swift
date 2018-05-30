@@ -10,8 +10,9 @@ import UIKit
 
 class GroupPageCell: UITableViewCell {
 
-    @IBOutlet weak var button: UIButton!
+
     @IBOutlet weak var groupPhoto: UIImageView!
+    
     @IBOutlet weak var groupName: UILabel!
     @IBAction func onGroupClick(_ sender: Any) {
         let button = sender as! UIButton;
@@ -20,7 +21,7 @@ class GroupPageCell: UITableViewCell {
         } else {
             button.setImage(#imageLiteral(resourceName: "Oval"), for: .normal)
         }
-        
     }
+   
 }
 
