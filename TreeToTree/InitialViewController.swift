@@ -20,6 +20,7 @@ class InitialViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        passwordTextField.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
         //CreateEvents.addEvents()
         //CreateUsers.addUsers()

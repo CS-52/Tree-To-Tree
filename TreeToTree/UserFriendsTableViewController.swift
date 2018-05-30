@@ -14,7 +14,7 @@ class UserFriendsTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //loadSamplePeople();
+       // loadSamplePeople();
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -108,19 +108,18 @@ class UserFriendsTableViewController: UITableViewController {
         performSegue(withIdentifier: "segueToProfile", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    /*
-    private func loadSamplePeople() {
-        //let photo = UIImage(named: "austinchow")
-        let person1 = Person(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
-        let person2 = Person(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
-        let person3 = Person(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
-        let person4 = Person(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
-        let person5 = Person(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
-        
+    
+  /*  private func loadSamplePeople() {
+        let photo = UIImage(named: "austinchow")
+        let person1 = User(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
+        let person2 = User(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
+        let person3 = User(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
+        let person4 = User(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
+        let person5 = User(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
+     
         friendsArray += [person1, person2, person3, person4, person5]
-        
-        
-    }
-    */
+     
+    } */
+    
 
 }

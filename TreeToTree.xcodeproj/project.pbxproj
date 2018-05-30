@@ -27,7 +27,6 @@
 		993BF7C5208DC23C000EB26C /* ProfilePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */; };
 		99498723208E78C100C938B4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99498722208E78C100C938B4 /* SearchViewController.swift */; };
 		995EDB3C20B8B3240047D994 /* Shift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995EDB3B20B8B3240047D994 /* Shift.swift */; };
-		995EDB3E20B8B7720047D994 /* SignUpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 995EDB3D20B8B7720047D994 /* SignUpPage.swift */; };
 		997A3598208DC3D300ED0969 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 997A3597208DC3D300ED0969 /* User.swift */; };
 		99EF2395208DD2FA00A52449 /* EventPersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99EF2394208DD2FA00A52449 /* EventPersonCell.swift */; };
 		99FE475C2099608A00A3E30A /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FE475B2099608A00A3E30A /* API.swift */; };
@@ -97,7 +96,6 @@
 		993BF7C4208DC23C000EB26C /* ProfilePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePageViewController.swift; sourceTree = "<group>"; };
 		99498722208E78C100C938B4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		995EDB3B20B8B3240047D994 /* Shift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shift.swift; sourceTree = "<group>"; };
-		995EDB3D20B8B7720047D994 /* SignUpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPage.swift; sourceTree = "<group>"; };
 		997A3597208DC3D300ED0969 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		99EF2394208DD2FA00A52449 /* EventPersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPersonCell.swift; sourceTree = "<group>"; };
 		99FE475B2099608A00A3E30A /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
 				82D9B9C720BDFE7A00F3C7E7 /* SignUpViewController.swift */,
-				995EDB3D20B8B7720047D994 /* SignUpPage.swift */,
 				AD93DFC32092B8F200E091D8 /* GroupPageViewController.swift */,
 				AD93DFC52092C59B00E091D8 /* GroupPageCell.swift */,
 				99498722208E78C100C938B4 /* SearchViewController.swift */,
@@ -472,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				995EDB3E20B8B7720047D994 /* SignUpPage.swift in Sources */,
 				99FE4762209963A400A3E30A /* CreateEvents.swift in Sources */,
 				AD93DFC42092B8F200E091D8 /* GroupPageViewController.swift in Sources */,
 				829C4C6520B4C06100FFA85D /* CreateUsers.swift in Sources */,

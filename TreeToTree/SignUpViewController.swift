@@ -29,9 +29,13 @@ class SignUpViewController: UIViewController {
                 "password": password.text ?? ""
             ]
             API.signUpUser(userInfo: userInfo)
+            //SEGUE
+            let navigationController = self.storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
+            self.present(navigationController, animated: false)
         }
     }
     override func viewDidLoad() {
+        password.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
