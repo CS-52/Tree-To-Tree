@@ -8,12 +8,14 @@
 
 import UIKit
 
+var currentUser: User?
+
 class InitialViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //CreateEvents.addEvents()
-        CreateUsers.addUsers()
+        //CreateUsers.addUsers()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -24,7 +26,6 @@ class InitialViewController: UIViewController {
     
     @IBAction func unwindToInitialViewController(segue:UIStoryboardSegue) { }
     
-
 
 }
 

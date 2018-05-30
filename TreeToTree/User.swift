@@ -11,7 +11,8 @@ import Foundation
 
 class User {
     var key: String!
-    var name: String!
+    var firstName: String!
+    var lastName: String!
     var image: UIImage!
     var major: String!
     var hours: Int!
@@ -24,8 +25,11 @@ class User {
     init(key: String, dictionary: Dictionary<String, AnyObject>){
         self.key = key
         
-        if let name = dictionary["name"] as? String{
-            self.name = name
+        if let name = dictionary["firstName"] as? String{
+            self.firstName = name
+        }
+        if let name = dictionary["lastName"] as? String{
+            self.lastName = name
         }
         
         if let image = dictionary["image"] as? UIImage{
@@ -36,6 +40,8 @@ class User {
         
         if let  major = dictionary["major"] as? String{
             self.major = major
+        } else{
+            self.major = ""
         }
         if let hours = dictionary["hours"] as? Int{
             self.hours = hours

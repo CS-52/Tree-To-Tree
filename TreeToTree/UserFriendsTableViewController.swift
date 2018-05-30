@@ -48,7 +48,7 @@ class UserFriendsTableViewController: UITableViewController {
         // Configure the cell...
         let friend = friendsArray[indexPath.row]
         cell.personImg.image = friend.image
-        cell.personName.text = friend.name
+        cell.personName.text = friend.firstName
         cell.personImg.layer.cornerRadius = cell.personImg.frame.size.width / 2;
 
         return cell

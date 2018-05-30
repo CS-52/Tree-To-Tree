@@ -19,7 +19,7 @@ class ProfilePageViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-        profileName.text = person?.name
+        profileName.text = person?.firstName
         profileImg.image = person?.image
         profileImg.layer.cornerRadius = profileImg.frame.size.width / 2;
     }

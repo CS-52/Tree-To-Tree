@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseDatabase
+import FirebaseAuth
 
 class API {
     static let databaseReference: DatabaseReference = Database.database().reference()
@@ -19,10 +20,16 @@ class API {
         eventReference.setValue(eventInfo)
         return //Event(key: key, dictionary: eventInfo)
     }
-    class func createUserWithKey(_ key: String, userInfo: Dictionary<String, AnyObject>) /*-> Event*/ {
+    class func createUser(userInfo: Dictionary<String, AnyObject>) /*-> User*/ {
+        let userReference = usersReference.childByAutoId()
+        userReference.setValue(userInfo)
+        return //User(key: key, dictionary: eventInfo)
+    }
+    
+    class func createUserWithKey(_ key:String, userInfo: Dictionary<String, Any>) /*-> User*/ {
         let userReference = usersReference.child(key)
         userReference.setValue(userInfo)
-        return //Event(key: key, dictionary: eventInfo)
+        return //User(key: key, dictionary: eventInfo)
     }
     
     class func getEventWithKey(_ key: String, completed: ((Event?) -> Void)?) {
@@ -70,6 +77,34 @@ class API {
             completed?(event)
         })
     }
+    
+    class func signUpUser(userInfo: Dictionary<String, Any>) {
+        Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: userInfo["password"] as! String) { (authResult, error) in
+            if(authResult != nil){
+              createUserWithKey((authResult?.uid)!, userInfo: userInfo)
+            }else{
+                print("Unable to create new user.")
+                print(error)
+            }
+        }
+    }
+    
+    func isValidUser(userInfo: Dictionary<String, Any>) -> Bool{
+        if(validateEmail(enteredEmail: userInfo["email"] as! String) && (userInfo["password"] as! String != "")){
+            return true
+        } else{
+            return false
+        }
+    }
+    
+    func validateEmail(enteredEmail:String) -> Bool {
+        
+        let emailFormat = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
+        return emailPredicate.evaluate(with: enteredEmail)
+        
+    }
 }
+
 
 

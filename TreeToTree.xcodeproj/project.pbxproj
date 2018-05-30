@@ -17,6 +17,7 @@
 		8232B7E2207AC56300D0C5AF /* TreeToTreeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232B7E1207AC56300D0C5AF /* TreeToTreeTests.swift */; };
 		8232B7ED207AC56300D0C5AF /* TreeToTreeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */; };
 		829C4C6520B4C06100FFA85D /* CreateUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829C4C6420B4C06100FFA85D /* CreateUsers.swift */; };
+		82D9B9C820BDFE7A00F3C7E7 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82D9B9C720BDFE7A00F3C7E7 /* SignUpViewController.swift */; };
 		990FF78920B50D1C00B94079 /* ShiftCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 990FF78820B50D1C00B94079 /* ShiftCell.swift */; };
 		9939FFEC2083FE17008348AF /* EventPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFEB2083FE17008348AF /* EventPageViewController.swift */; };
 		9939FFEE20840487008348AF /* EventBrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9939FFED20840487008348AF /* EventBrowserController.swift */; };
@@ -85,6 +86,7 @@
 		8232B7EC207AC56300D0C5AF /* TreeToTreeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeToTreeUITests.swift; sourceTree = "<group>"; };
 		8232B7EE207AC56300D0C5AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		829C4C6420B4C06100FFA85D /* CreateUsers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUsers.swift; sourceTree = "<group>"; };
+		82D9B9C720BDFE7A00F3C7E7 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		98E33B3C4435D73C892D99C0 /* Pods_TreeToTreeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TreeToTreeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		990FF78820B50D1C00B94079 /* ShiftCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShiftCell.swift; sourceTree = "<group>"; };
 		9939FFEB2083FE17008348AF /* EventPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventPageViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				829C4C6420B4C06100FFA85D /* CreateUsers.swift */,
 				8232B7CE207AC56200D0C5AF /* InitialViewController.swift */,
 				8232B7D0207AC56200D0C5AF /* Main.storyboard */,
+				82D9B9C720BDFE7A00F3C7E7 /* SignUpViewController.swift */,
 				995EDB3D20B8B7720047D994 /* SignUpPage.swift */,
 				AD93DFC32092B8F200E091D8 /* GroupPageViewController.swift */,
 				AD93DFC52092C59B00E091D8 /* GroupPageCell.swift */,
@@ -475,6 +478,7 @@
 				829C4C6520B4C06100FFA85D /* CreateUsers.swift in Sources */,
 				ADFF0777208D9E0D001E8C43 /* UserProfile.swift in Sources */,
 				993BF7C1208DBC94000EB26C /* UserFriendsTableViewController.swift in Sources */,
+				82D9B9C820BDFE7A00F3C7E7 /* SignUpViewController.swift in Sources */,
 				8232B7CF207AC56200D0C5AF /* InitialViewController.swift in Sources */,
 				AD93DFC62092C59B00E091D8 /* GroupPageCell.swift in Sources */,
 				99498723208E78C100C938B4 /* SearchViewController.swift in Sources */,

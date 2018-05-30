@@ -11,10 +11,11 @@ import Foundation
 class CreateUsers {
     class func addUsers() {
         ///*// CODE TO CREATE EVENTS IN BACK END.  REMOVE AFTER FIRST RUN \\
-        let userIDs = ["0000", "0001", "0002", "0003"]
+        //let userIDs = ["0000", "0001", "0002", "0003"]
         
         //USER 0
-        let name0 = "Austin Chow"
+        let name0 = "Austin"
+        let lastName0 = "Chow"
         let year0 = "Sophomore"
         let major0 = "Computer Science"
         //let photo1
@@ -29,7 +30,8 @@ class CreateUsers {
         let interestedIDs0 = ["0001"]
         
         let userInfo0: [String: Any] = [
-            "name": name0,
+            "firstName": name0,
+            "lastName": lastName0,
             "year": year0,
             "major": major0,
             "hours": hours0,
@@ -40,7 +42,8 @@ class CreateUsers {
         ]
         
         //USER 1
-        let name1 = "Suzanne Joh"
+        let name1 = "Suzanne"
+        let lastName1 = "Joh"
         let year1 = "Sophomore"
         let major1 = "Computer Science"
         //let photo1
@@ -56,7 +59,8 @@ class CreateUsers {
         
         
         let userInfo1: [String: Any] = [
-            "name": name1,
+            "firstName": name1,
+            "lastName": lastName1,
             "year": year1,
             "major": major1,
             "hours": hours1,
@@ -69,7 +73,7 @@ class CreateUsers {
         let userInfos = [userInfo0, userInfo1]
         
         for i in 0...1{
-            API.createUserWithKey(userIDs[i], userInfo: userInfos[i] as Dictionary<String, AnyObject>)
+            API.createUser(userInfo: userInfos[i] as Dictionary<String, AnyObject>)
         }
         
     }

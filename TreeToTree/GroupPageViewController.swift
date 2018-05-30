@@ -40,7 +40,7 @@ class GroupPageViewController: UITableViewController {
         
         let group = groupsArray[indexPath.row]
         cell.groupPhoto.image = group.image
-        cell.groupName.text = group.name
+        cell.groupName.text = group.firstName
         
         return cell
     }
