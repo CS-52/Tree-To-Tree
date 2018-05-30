@@ -21,6 +21,8 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var filter: UIButton!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var hiddenSidebar: UIView!
+    
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var EventBrowswer: UIStackView!
@@ -38,8 +40,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
-            filter.isHidden = true;
-
+            filter.isHidden = false;
             tableView.isUserInteractionEnabled = true;
         } else {
             leadingConstraint.constant = 250
@@ -56,16 +57,18 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     
     @IBAction func goBack(_ sender: Any) {
+        
         if(menuShowing) {
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
-            tableView.isUserInteractionEnabled = true;
+            tableView.isUserInteractionEnabled = false;
             UIView.animate(withDuration: 0.3, animations: {
                 self.view.layoutIfNeeded()
             })
             menuShowing = !menuShowing
         }
+ 
     }
     
     override func viewDidLoad() {

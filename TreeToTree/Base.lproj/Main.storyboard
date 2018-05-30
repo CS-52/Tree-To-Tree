@@ -291,6 +291,7 @@
                     <connections>
                         <outlet property="email" destination="Rep-9d-lRy" id="bZ8-0v-dId"/>
                         <outlet property="firstName" destination="0Cy-NS-OkT" id="ZIG-GY-NFJ"/>
+                        <outlet property="image" destination="yCR-Bg-sZH" id="X96-eT-ROJ"/>
                         <outlet property="lastName" destination="p8U-HW-Ef5" id="oGu-9Z-zC9"/>
                         <outlet property="major" destination="4o4-uV-dPJ" id="N1l-3B-vaJ"/>
                         <outlet property="password" destination="4Tx-lo-MKc" id="B1J-sN-SqR"/>
@@ -579,20 +580,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Favorited Events" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hyS-OU-azL">
-                                <rect key="frame" x="67" y="63" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1YJ-He-05G">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0Og-AY-Mdd">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0Og-AY-Mdd" id="U7S-w3-xHQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1YJ-He-05G" firstAttribute="top" secondItem="yGM-6i-gjg" secondAttribute="bottom" id="5TG-oa-ZtV"/>
+                            <constraint firstAttribute="trailing" secondItem="1YJ-He-05G" secondAttribute="trailing" id="D6h-qY-9Uy"/>
+                            <constraint firstItem="x0k-Q6-jcX" firstAttribute="top" secondItem="1YJ-He-05G" secondAttribute="bottom" id="WPK-45-cDV"/>
+                            <constraint firstItem="1YJ-He-05G" firstAttribute="leading" secondItem="Gkb-TU-yXm" secondAttribute="leading" id="zln-uN-G4C"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="i9R-Ic-gQe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="319" y="-1519"/>
+            <point key="canvasLocation" x="317.60000000000002" y="-1519.7901049475263"/>
         </scene>
         <!--Event Browser-->
         <scene sceneID="Ypj-Z5-xud">
@@ -709,6 +723,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="36"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <button opaque="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-Oy-uwz">
+                                <rect key="frame" x="226" y="0.0" width="149" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="goBack:" destination="F8n-I7-dK2" eventType="touchUpInside" id="OWl-Q3-59h"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jpx-x8-RUN" userLabel="Event Browser">
                                 <rect key="frame" x="0.0" y="28" width="375" height="531"/>
                                 <subviews>
@@ -782,7 +803,7 @@
                                                                                 <color key="titleColor" red="0.53007483479999995" green="0.85670226810000005" blue="0.73724496360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                             </state>
                                                                             <connections>
-                                                                                <action selector="onHeartClick:" destination="IgJ-e9-FS4" eventType="touchUpInside" id="b1t-pz-bwa"/>
+                                                                                <action selector="onHeartClick:" destination="IgJ-e9-FS4" eventType="touchUpInside" id="k1J-Qe-9T0"/>
                                                                             </connections>
                                                                         </button>
                                                                     </subviews>
@@ -809,7 +830,6 @@
                                                                     <outlet property="date" destination="WCu-2R-GqB" id="Slf-0d-Iuz"/>
                                                                     <outlet property="eventImage" destination="bwS-3m-uI7" id="8lh-nh-8ar"/>
                                                                     <outlet property="eventName" destination="JYl-dq-id0" id="XLQ-dv-Y11"/>
-                                                                    <outlet property="interest" destination="fDh-yZ-SHg" id="Pni-0N-Ksj"/>
                                                                     <outlet property="peopleGoing" destination="DuE-UT-Dtb" id="JFO-Uw-NRv"/>
                                                                     <outlet property="shifts" destination="hvj-MD-FSc" id="3Oh-ZG-YYf"/>
                                                                 </connections>
@@ -822,19 +842,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJv-Oy-uwz">
-                                <rect key="frame" x="226" y="0.0" width="149" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="goBack:" destination="F8n-I7-dK2" eventType="touchUpInside" id="OWl-Q3-59h"/>
-                                </connections>
-                            </button>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9im-Lu-Iuo">
-                                <rect key="frame" x="250" y="0.0" width="125" height="603"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81S-Kd-vhL">
                                 <rect key="frame" x="295" y="0.0" width="80" height="36"/>
                                 <constraints>
@@ -857,10 +864,14 @@
                             <constraint firstAttribute="trailing" secondItem="uz8-iR-Pbi" secondAttribute="trailing" id="5Wb-vb-FKL"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="bottom" secondItem="oQd-Jl-iMV" secondAttribute="top" id="5cM-Pv-1BX"/>
                             <constraint firstItem="Jpx-x8-RUN" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="5dn-NP-PrC"/>
+                            <constraint firstItem="eJv-Oy-uwz" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="Kkk-gJ-E6q"/>
                             <constraint firstItem="oQd-Jl-iMV" firstAttribute="top" secondItem="Xfw-MX-dAa" secondAttribute="bottom" id="UAz-MD-DT7"/>
+                            <constraint firstAttribute="bottom" secondItem="eJv-Oy-uwz" secondAttribute="bottom" id="Vtb-eT-iNO"/>
                             <constraint firstItem="uz8-iR-Pbi" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="W2f-Ef-JlV"/>
                             <constraint firstAttribute="trailing" secondItem="81S-Kd-vhL" secondAttribute="trailing" id="WGJ-ZT-Uc2"/>
                             <constraint firstItem="Xfw-MX-dAa" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="XHQ-Rm-fPd"/>
+                            <constraint firstItem="eJv-Oy-uwz" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" constant="226" id="aoF-aq-klO"/>
+                            <constraint firstAttribute="trailing" secondItem="eJv-Oy-uwz" secondAttribute="trailing" id="d0a-7W-bny"/>
                             <constraint firstItem="uz8-iR-Pbi" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="eEc-YS-sYq"/>
                             <constraint firstItem="Xfw-MX-dAa" firstAttribute="leading" secondItem="UPS-Yj-EYg" secondAttribute="leading" id="gLI-7r-hHh"/>
                             <constraint firstItem="81S-Kd-vhL" firstAttribute="top" secondItem="um7-KP-c84" secondAttribute="bottom" id="hgw-fe-NeT"/>
@@ -884,6 +895,7 @@
                         <outlet property="EventBrowswer" destination="Jpx-x8-RUN" id="Mev-B7-Mmx"/>
                         <outlet property="filter" destination="81S-Kd-vhL" id="xJG-g3-0Ve"/>
                         <outlet property="goBackButton" destination="eJv-Oy-uwz" id="3Ql-Bl-2Vc"/>
+                        <outlet property="hiddenSidebar" destination="Xfw-MX-dAa" id="Adb-Mh-zxO"/>
                         <outlet property="leadingConstraint" destination="5dn-NP-PrC" id="n0r-qI-LpA"/>
                         <outlet property="mainView" destination="UPS-Yj-EYg" id="YeD-UT-uv4"/>
                         <outlet property="searchIcon" destination="05A-H4-3iL" id="NQL-xh-y4R"/>

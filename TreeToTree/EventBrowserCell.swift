@@ -18,9 +18,9 @@ class EventBrowserCell: UITableViewCell {
     @IBOutlet weak var eventName: UILabel!
     @IBOutlet weak var shifts: UILabel!
     @IBOutlet weak var peopleGoing: UILabel!
-    @IBOutlet weak var interest: UIButton!
-    @IBAction func onHeartClick(_ sender: Any) { //add to interested - backend functionality
-        let button = sender as! UIButton;
+    //@IBOutlet weak var interested: UIButton!
+    @IBAction func onHeartClick(_ sender: UIButton) {
+        let button = sender;
         if((button.image(for: .normal)) == #imageLiteral(resourceName: "heartOutline")) {
             button.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
             //add this event to the user's list of interested ids and add this user to the event's list of interested ids
@@ -34,9 +34,7 @@ class EventBrowserCell: UITableViewCell {
         //show up as filled for events already in user's list
         
         //set isSelected through backend
-        
     }
-    
     
     
 }
