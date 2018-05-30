@@ -11,7 +11,14 @@ import UIKit
 var currentUser: User?
 
 class InitialViewController: UIViewController {
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
+    @IBAction func login(_ sender: Any) {
+        if let email = emailTextField.text, let password = passwordTextField.text{
+            API.signInUser(email:email , password: password)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         //CreateEvents.addEvents()

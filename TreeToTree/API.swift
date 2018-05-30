@@ -79,12 +79,27 @@ class API {
     }
     
     class func signUpUser(userInfo: Dictionary<String, Any>) {
+        //Need better error checking
         Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: userInfo["password"] as! String) { (authResult, error) in
             if(authResult != nil){
               createUserWithKey((authResult?.uid)!, userInfo: userInfo)
             }else{
                 print("Unable to create new user.")
-                print(error)
+                print(error ?? "")
+            }
+        }
+    }
+    
+    class func signInUser(email: String, password:String){
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if(user != nil){
+                getUserWithKey((user?.uid)!, completed: { (user) in
+                    currentUser = user
+                    print(currentUser!)
+                })
+            } else{
+                print("Unable to login.")
+                print(error ?? "")
             }
         }
     }
