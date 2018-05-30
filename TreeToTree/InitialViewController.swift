@@ -6,9 +6,11 @@
 //  Copyright © 2018 CS+Social Good. All rights reserved.
 //
 
+
 import UIKit
 
 var currentUser: User?
+//have a did set method for user
 
 class InitialViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
@@ -24,7 +26,9 @@ class InitialViewController: UIViewController {
         super.viewDidLoad()
         //CreateEvents.addEvents()
         //CreateUsers.addUsers()
-        // Do any additional setup after loading the view, typically from a nib.
+        //Check if current user is saved from firebase
+            // -if so, segue to browser
+            // -else do nothing
     }
 
     override func didReceiveMemoryWarning() {

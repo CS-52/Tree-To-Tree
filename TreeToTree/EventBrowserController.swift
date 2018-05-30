@@ -26,7 +26,12 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var EventBrowswer: UIStackView!
     var menuShowing = false
     
-    var eventsArray = [Event](){didSet{tableView.reloadData()}}
+    var eventsArray = [Event](){
+        didSet {
+            tableView.reloadData()
+            
+        }
+    }
     
     @IBAction func showMenu(_ sender: Any) {
         if (menuShowing) {

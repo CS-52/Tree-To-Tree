@@ -97,6 +97,8 @@ class API {
                     currentUser = user
                     print(currentUser!)
                 })
+//                let navigationController = InitialViewController.storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
+//                self.present(navigationController, animated: false)
             } else{
                 print("Unable to login.")
                 print(error ?? "")
