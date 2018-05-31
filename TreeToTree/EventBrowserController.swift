@@ -18,6 +18,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     @IBOutlet weak var tableView: UITableView!
    
+    @IBOutlet weak var nextToFilter: UIView!
     @IBOutlet weak var filter: UIButton!
     @IBOutlet weak var leadingConstraint: NSLayoutConstraint!
     
@@ -47,11 +48,13 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             trailingConstraint.constant = 0
             EventBrowswer.layer.opacity = 1
             filter.isHidden = false;
+            nextToFilter.isHidden = false;
             tableView.isUserInteractionEnabled = true;
         } else {
             leadingConstraint.constant = 250
             trailingConstraint.constant = -250
             EventBrowswer.layer.opacity = 0.3
+            nextToFilter.isHidden = true;
             filter.isHidden = true;
             tableView.isUserInteractionEnabled = false;
         }
