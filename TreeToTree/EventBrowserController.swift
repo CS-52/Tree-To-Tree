@@ -73,6 +73,9 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let initialViewController = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
+        UIApplication.shared.keyWindow?.rootViewController = initialViewController
+        
         tableView.delegate = self
         tableView.dataSource = self
         mainView.layer.shadowOpacity = 1
@@ -160,17 +163,17 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func unwindToEventBrowser(segue:UIStoryboardSegue) { }
     
-//    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-//    
-//            if let id = identifier {
-//                if id == "logout" {
-//                    let unwindSegue = UnwindRightToLeft(identifier: id, source: fromViewController, destination: toViewController)
-//                    return unwindSegue
-//                }
-//            }
-//    
-//        return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
-//    }
+    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+    
+            //if let id = identifier {
+             //   if id == "logout" {
+                    let unwindSegue = UnwindRightToLeft(identifier: "logout", source: fromViewController, destination: toViewController)
+                    return unwindSegue
+                //}
+           // }
+    
+        //return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
+    }
     
 
    

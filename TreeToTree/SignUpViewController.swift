@@ -31,8 +31,8 @@ class SignUpViewController: UIViewController {
             ]
             API.signUpUser(userInfo: userInfo)
             //SEGUE
-            let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin") as! UIViewController
-            self.present(tutorialController, animated: true)
+            let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin")
+            self.present(tutorialController!, animated: true)
         }
     }
     override func viewDidLoad() {
