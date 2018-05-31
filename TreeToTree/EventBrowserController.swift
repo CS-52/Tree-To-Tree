@@ -28,6 +28,12 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var EventBrowswer: UIStackView!
     var menuShowing = false
     
+    @IBAction func onSignOut(_ sender: UIButton) {
+//        let initialViewController = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
+//        UIApplication.shared.keyWindow?.rootViewController = initialViewController
+        
+    }
+    
     var eventsArray = [Event](){
         didSet {
             tableView.reloadData()
@@ -73,8 +79,8 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let initialViewController = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
-        UIApplication.shared.keyWindow?.rootViewController = initialViewController
+        //let initialViewController = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
+       // UIApplication.shared.keyWindow?.rootViewController = initialViewController
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -130,6 +136,8 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+
         let selectedIndex = indexPath.row //what user taps on
         performSegue(withIdentifier: "segue", sender: self)
         tableView.deselectRow(at: indexPath, animated: true)
@@ -163,17 +171,13 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     @IBAction func unwindToEventBrowser(segue:UIStoryboardSegue) { }
     
-    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
-    
-            //if let id = identifier {
-             //   if id == "logout" {
-                    let unwindSegue = UnwindRightToLeft(identifier: "logout", source: fromViewController, destination: toViewController)
-                    return unwindSegue
-                //}
-           // }
-    
-        //return super.segueForUnwinding(to: toViewController, from: fromViewController, identifier: identifier)!
-    }
+//    override func segueForUnwinding(to toViewController: UIViewController, from fromViewController: UIViewController, identifier: String?) -> UIStoryboardSegue {
+//        
+
+//                    let unwindSegue = UnwindRightToLeft(identifier: "logout", source: fromViewController, destination: toViewController)
+//                    return unwindSegue
+//
+//    }
     
 
    

@@ -8,11 +8,14 @@
 
 import UIKit
 
+//NOT CURRENTLY IN USE
+
 class UnwindRightToLeft: UIStoryboardSegue {
     override func perform() {
         let src = self.source as UIViewController
         let dst = self.destination as UIViewController
-        let appDelegate  = UIApplication.shared.delegate as! AppDelegate
+        
+        //let appDelegate  = UIApplication.shared.delegate as! AppDelegate
         //Trying to get nav bar to animate the same way
 //        let nav = appDelegate.window!.rootViewController?.navigationController!.viewControllers.first as! UINavigationController
         

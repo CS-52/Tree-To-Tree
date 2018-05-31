@@ -958,6 +958,7 @@
                                                             </userDefinedRuntimeAttribute>
                                                         </userDefinedRuntimeAttributes>
                                                         <connections>
+                                                            <action selector="onSignOut:" destination="F8n-I7-dK2" eventType="touchUpInside" id="KZw-wL-Fx4"/>
                                                             <segue destination="dmb-eL-Pkr" kind="unwind" identifier="logout" unwindAction="unwindFromLogOutWithSegue:" id="eqr-YT-s20"/>
                                                         </connections>
                                                     </button>
