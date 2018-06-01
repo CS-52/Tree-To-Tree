@@ -42,7 +42,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewDidLoad() {
-        self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 8;
+        self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 12;
         password.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
 

@@ -230,9 +230,10 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgg-MS-R2V">
-                                                <rect key="frame" x="128" y="453" width="119" height="30"/>
+                                                <rect key="frame" x="117.5" y="453" width="140" height="30"/>
                                                 <color key="backgroundColor" red="0.53007483479999995" green="0.85670226810000005" blue="0.73724496360000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="B3o-dp-Ieg"/>
                                                     <constraint firstAttribute="height" constant="30" id="TOK-b7-4PK"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
