@@ -13,6 +13,9 @@ var currentUser: User?
 //have a did set method for user
 
 class InitialViewController: UIViewController {
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
@@ -22,6 +25,8 @@ class InitialViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        self.loginButton.layer.cornerRadius = self.loginButton.frame.size.width / 8;
+        self.signUpButton.layer.cornerRadius = self.signUpButton.frame.size.width / 8;
         passwordTextField.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
         //CreateEvents.addEvents()

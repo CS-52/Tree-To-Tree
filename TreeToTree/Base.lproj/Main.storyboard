@@ -156,7 +156,9 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Unh-kb-MsL" id="3fx-ii-LmV"/>
+                        <outlet property="loginButton" destination="MHV-aY-yEE" id="gaF-Sa-dJB"/>
                         <outlet property="passwordTextField" destination="Nyz-F6-gkz" id="hSd-1y-cI8"/>
+                        <outlet property="signUpButton" destination="K9L-kP-d1h" id="cMF-up-dgc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -321,6 +323,7 @@
                     </view>
                     <size key="freeformSize" width="375" height="725"/>
                     <connections>
+                        <outlet property="createAccountButton" destination="sgg-MS-R2V" id="Zss-en-DFz"/>
                         <outlet property="email" destination="Rep-9d-lRy" id="bZ8-0v-dId"/>
                         <outlet property="firstName" destination="0Cy-NS-OkT" id="ZIG-GY-NFJ"/>
                         <outlet property="image" destination="yCR-Bg-sZH" id="2Rg-eP-jYZ"/>
@@ -2174,6 +2177,6 @@
         <image name="suzannejoh" width="1824" height="2736"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cvK-Os-vMI"/>
+        <segue reference="p0D-yF-aNX"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -9,8 +9,8 @@
 import UIKit
 
 class SignUpViewController: UIViewController {
-  
-    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -42,6 +42,7 @@ class SignUpViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 8;
         password.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
 
