@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
   
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var firstName: UITextField!
     @IBOutlet weak var lastName: UITextField!
@@ -35,6 +36,11 @@ class SignUpViewController: UIViewController {
             self.present(tutorialController!, animated: true)
         }
     }
+   
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true) //This will hide the keyboard
+    }
+    
     override func viewDidLoad() {
         password.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
