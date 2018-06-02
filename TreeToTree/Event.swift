@@ -17,12 +17,17 @@ class Event  {
     var name: String!
     var date: String!//Date
     var location: String? //cl location class for ios
-    var shifts: Dictionary<String, Dictionary<String, String>>!//table within event
+    var shifts: Dictionary<String, Dictionary<String, Any>>!//table within event
+    //"shiftID": //starting with "0000"
+    //  -"start time": String
+    //  -"end time": String
+    //  -"name":  String
+    //  -"userIDs": [String]//user IDs going to that event
     var image: UIImage!
     var interestedIDs: [String]!
-    var goingIDs: Dictionary<String, Dictionary<String, [String]>>!
     var description: String!
     var organization: String!
+    var goingIDs: [String]! //not in database, constructed locally from shifts
     
     //additional things needed: people interested, people going, about, location, organization, fix shifts and people so they are not strings
     
@@ -55,16 +60,19 @@ class Event  {
         } else {
             self.interestedIDs = [String]();
         }
-        if let goingIDs = dictionary["shifts"] as? Dictionary<String, Dictionary<String, [String]>>{
-            self.goingIDs = goingIDs;
-        }else{
-            self.goingIDs = Dictionary<String, Dictionary<String, [String]>>();
-        }
         if let description = dictionary["description"] as? String{
             self.description = description
         }
         if let organization = dictionary["organization"] as? String{
             self.organization = organization
+        }
+        goingIDs = [String]()
+        
+        for key in self.shifts.keys {
+            let shiftGoing = shifts[key]?["goingIDs"] as? [String]
+            for ID in (shiftGoing)! {
+                goingIDs.append(ID)
+            }
         }
     }
 }

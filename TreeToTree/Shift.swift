@@ -17,21 +17,25 @@ class Shift  {
     var name: String!
     var start: String!
     var end: String!
+    var goingIDs: [String]!
     
     
-    init(key: String, dictionary: Dictionary<String, String>){
+    init(key: String, dictionary: Dictionary<String, Any>){
         self.key = key
         
         if let name = dictionary["name"]{
-            self.name = name
+            self.name = name as! String
         }
         
         if let start = dictionary["start time"]{
-            self.start = start
+            self.start = start as! String
         }
         
         if let end = dictionary["end time"]{
-            self.end = end
+            self.end = end as! String
+        }
+        if let goingIDs = dictionary["goingIDs"]{
+            self.goingIDs = goingIDs as! [String]
         }
    
     }
