@@ -90,7 +90,7 @@ class API {
         }
     }
     
-    class func signInUser(email: String, password:String){
+    class func signInUser(email: String, password:String, loginPage: InitialViewController){
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if(user != nil){
                 getUserWithKey((user?.uid)!, completed: { (user) in
@@ -99,6 +99,7 @@ class API {
                 })
 //                let navigationController = InitialViewController.storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
 //                self.present(navigationController, animated: false)
+                loginPage.moveToEventsPage()
             } else{
                 print("Unable to login.")
                 print(error ?? "")
