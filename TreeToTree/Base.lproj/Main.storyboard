@@ -323,12 +323,12 @@
                     </view>
                     <connections>
                         <outlet property="createAccountButton" destination="sgg-MS-R2V" id="Zss-en-DFz"/>
-                        <outlet property="email" destination="Rep-9d-lRy" id="bZ8-0v-dId"/>
-                        <outlet property="firstName" destination="0Cy-NS-OkT" id="ZIG-GY-NFJ"/>
+                        <outlet property="emailTextField" destination="Rep-9d-lRy" id="NFT-B6-fQi"/>
+                        <outlet property="firstNameTextField" destination="0Cy-NS-OkT" id="uTP-VI-wIG"/>
                         <outlet property="image" destination="yCR-Bg-sZH" id="2Rg-eP-jYZ"/>
-                        <outlet property="lastName" destination="p8U-HW-Ef5" id="oGu-9Z-zC9"/>
-                        <outlet property="major" destination="4o4-uV-dPJ" id="N1l-3B-vaJ"/>
-                        <outlet property="password" destination="4Tx-lo-MKc" id="B1J-sN-SqR"/>
+                        <outlet property="lastNameTextField" destination="p8U-HW-Ef5" id="brh-m0-Hlc"/>
+                        <outlet property="majorTextField" destination="4o4-uV-dPJ" id="NHm-Bt-j8u"/>
+                        <outlet property="passwordTextField" destination="4Tx-lo-MKc" id="PxD-Le-yXm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4cr-ot-xr7" userLabel="First Responder" sceneMemberID="firstResponder"/>

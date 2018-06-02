@@ -78,14 +78,15 @@ class API {
         })
     }
     
-    class func signUpUser(userInfo: Dictionary<String, Any>) {
+    class func signUpUser(userInfo: Dictionary<String, Any>, password: String, signUpPage: SignUpViewController) {
         //Need better error checking
-        Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: userInfo["password"] as! String) { (authResult, error) in
+        Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: password ) { (authResult, error) in
             if(authResult != nil){
+              print("created New User")
               createUserWithKey((authResult?.uid)!, userInfo: userInfo)
+              signUpPage.beginTutorial()
             }else{
-                print("Unable to create new user.")
-                print(error ?? "")
+                signUpPage.showAlert(errorString: (error?.localizedDescription)!)
             }
         }
     }
@@ -97,10 +98,9 @@ class API {
                     currentUser = user
                     print(currentUser!)
                 })
-//                let navigationController = InitialViewController.storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
-//                self.present(navigationController, animated: false)
                 loginPage.moveToEventsPage()
             } else{
+                loginPage.showAlert(errorString: (error?.localizedDescription)!)
                 print("Unable to login.")
                 print(error ?? "")
             }
@@ -121,6 +121,17 @@ class API {
         let emailPredicate = NSPredicate(format:"SELF MATCHES %@", emailFormat)
         return emailPredicate.evaluate(with: enteredEmail)
         
+    }
+    
+    class func signOut(){
+        let firebaseAuth = Auth.auth()
+        do {
+            try firebaseAuth.signOut()
+            currentUser = nil
+            print("User signed out")
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
 }
 

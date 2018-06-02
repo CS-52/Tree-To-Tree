@@ -12,29 +12,36 @@ class SignUpViewController: UIViewController {
     
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var firstName: UITextField!
-    @IBOutlet weak var lastName: UITextField!
-    @IBOutlet weak var major: UITextField!
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
+    @IBOutlet weak var firstNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var majorTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBAction func signUp(_ sender: UIButton) {
-        if (!validateEmail(enteredEmail: email.text ?? "")){
+        if (!validateEmail(enteredEmail: emailTextField.text ?? "")){
             showAlert(errorString: "Please provide a valid email")
-        } else if((password.text?.characters.count)!  < 6){
+        } else if((passwordTextField.text?.characters.count)!  < 6){
             showAlert(errorString: "Password must be at least 6 characters wrong.")
-        } else {
+        } else if let firstName = firstNameTextField?.text, !firstName.isEmpty, let lastName = lastNameTextField?.text, !lastName.isEmpty, let major = majorTextField?.text, !major.isEmpty  {
             let userInfo: [String: Any] = [
-                "firstName": firstName.text ?? "",
-                "lastName": lastName.text ?? "",
-                "major": major.text ?? "",
-                "email": email.text ?? "",
-                "password": password.text ?? ""
+                "firstName": firstName,
+                "lastName": lastName,
+                "major": major,
+                "email": emailTextField.text!,
+                "hours": 0
             ]
-            API.signUpUser(userInfo: userInfo)
+            API.signUpUser(userInfo: userInfo, password: self.passwordTextField.text!, signUpPage: self) //calls segue if successful
             //SEGUE
-            let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin")
-            self.present(tutorialController!, animated: true)
+            //let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin")
+            //self.present(tutorialController!, animated: true)
+        } else{
+            showAlert(errorString: "Please provide a first name, a last name, and a major.")
         }
+    }
+    
+    func beginTutorial() {
+        let tutorialController = self.storyboard?.instantiateViewController(withIdentifier: "tutorialBegin")
+        self.present(tutorialController!, animated: true)
     }
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -43,7 +50,7 @@ class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 12;
-        password.isSecureTextEntry = true //black dots, hides keys
+        passwordTextField.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
