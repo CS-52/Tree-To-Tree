@@ -21,7 +21,7 @@ class InitialViewController: UIViewController {
 
     @IBAction func login(_ sender: Any) {
         if let email = emailTextField.text, let password = passwordTextField.text{
-            API.signInUser(email:email , password: password)
+            API.signInUser(email:email , password: password, loginPage: self)
         }
     }
     override func viewDidLoad() {
@@ -47,6 +47,11 @@ class InitialViewController: UIViewController {
         let initialViewController = storyboard?.instantiateViewController(withIdentifier: "InitialViewController") as! InitialViewController
         UIApplication.shared.keyWindow?.rootViewController = initialViewController
         
+    }
+    
+    func moveToEvents(){
+        let navigationController = storyboard?.instantiateViewController(withIdentifier: "navigationController") as! UINavigationController
+        self.present(navigationController, animated:false)
     }
     
     
