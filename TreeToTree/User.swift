@@ -16,10 +16,10 @@ class User {
     var image: UIImage!
     var major: String!
     var hours: Int!
-    var badgesIDs: [String]!
-    var friendsIDs: [String]!
-    var goingIDs: Dictionary<String, Dictionary<String, [String]>>!
-    var interestedIDs: [String]!
+    var badgesIDs: Dictionary<String, String>!
+    var friendsIDs: Dictionary<String, String>!
+    var goingIDs: Dictionary<String, Dictionary<String, String>>!
+    var interestedIDs: Dictionary<String,String>!
     
     
     init(key: String, dictionary: Dictionary<String, AnyObject>){
@@ -38,7 +38,7 @@ class User {
             self.image = #imageLiteral(resourceName: "austinchow")
         }
         
-        if let  major = dictionary["major"] as? String{
+        if let  major = dictionary["major"] as? String!{
             self.major = major
         } else{
             self.major = ""
@@ -46,13 +46,13 @@ class User {
         if let hours = dictionary["hours"] as? Int{
             self.hours = hours
         }
-        if let friendsIDs = dictionary["friends"] as? [String]{
+        if let friendsIDs = dictionary["friends"] as? Dictionary<String, String>{
             self.friendsIDs = friendsIDs
         }
-        if let goingIDs = dictionary["goingIDs"] as? Dictionary<String, Dictionary<String, [String]>>{
+        if let goingIDs = dictionary["goingIDs"] as? Dictionary<String, Dictionary<String, String>>{
             self.goingIDs = goingIDs
         }
-        if let interestedIDs = dictionary["interestedIDs"] as? [String]{
+        if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, String>{
             self.interestedIDs = interestedIDs
         }
     }

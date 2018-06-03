@@ -24,7 +24,7 @@ class Event  {
     //  -"name":  String
     //  -"userIDs": [String]//user IDs going to that event
     var image: UIImage!
-    var interestedIDs: [String]!
+    var interestedIDs: Dictionary<String, String>!
     var description: String!
     var organization: String!
     var goingIDs: [String]! //not in database, constructed locally from shifts
@@ -55,10 +55,10 @@ class Event  {
         } else{
             self.image = #imageLiteral(resourceName: "Challah-Bread");
         }
-        if let interestedIDs = dictionary["interestedIDs"] as? [String]{
+        if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, String>{
             self.interestedIDs = interestedIDs;
         } else {
-            self.interestedIDs = [String]();
+            self.interestedIDs = Dictionary<String, String>();
         }
         if let description = dictionary["description"] as? String{
             self.description = description
@@ -69,9 +69,11 @@ class Event  {
         goingIDs = [String]()
         
         for key in self.shifts.keys {
-            let shiftGoing = shifts[key]?["goingIDs"] as? [String]
-            for ID in (shiftGoing)! {
-                goingIDs.append(ID)
+            let shiftGoing = shifts[key]?["goingIDs"] as? Dictionary<String, String>
+            if(shiftGoing != nil){
+                for ID in (shiftGoing?.values)! {
+                 goingIDs.append(ID)
+                }
             }
         }
     }
