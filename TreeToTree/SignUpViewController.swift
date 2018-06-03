@@ -52,7 +52,7 @@ class SignUpViewController: UIViewController {
         self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 12;
         passwordTextField.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
-
+        //createAccountButton.layer.cornerRadius = createAccountButton.frame.size.width / 2;
         // Do any additional setup after loading the view.
     }
 
