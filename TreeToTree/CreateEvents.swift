@@ -57,7 +57,7 @@ class CreateEvents {
             "organization": organization1
         ]
         
-        //EVENT 1 
+        //EVENT 1
         let name2 = "Challah Bake"
         let date2 = Date.init()
         let location2 = "Hillel"
@@ -86,10 +86,10 @@ class CreateEvents {
         let description2 = "Come bake some challah!\n It's gonna be lit"
         let organization2 = "Challah for Hunger"
         
-        let dateFormatter = DateFormatter()
+        let dateFormatter2 = DateFormatter()
         dateFormatter.dateFormat = "EEEE MMMM d, y h:mm"
         
-        let eventInfo0: [String: Any] = [
+        let eventInfo1: [String: Any] = [
             "name": name2,
             "date": dateFormatter.string(from: date2),
             "location": location2,
