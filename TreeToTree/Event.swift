@@ -31,9 +31,9 @@ class Event  {
     
     //additional things needed: people interested, people going, about, location, organization, fix shifts and people so they are not strings
     
-    init(key: String, dictionary: Dictionary<String, AnyObject>){
+    init(key: String, dictionary: Dictionary<String, AnyObject>, image: UIImage){
         self.key = key
-        
+        self.image = image
         if let name = dictionary["name"] as? String{
             self.name = name
         }
@@ -50,11 +50,11 @@ class Event  {
         }else{
             self.shifts = Dictionary<String, Dictionary<String, String>>();
         }
-        if let image = dictionary["image"] as? UIImage{
-            self.image = image;
-        } else{
-            self.image = #imageLiteral(resourceName: "Challah-Bread");
-        }
+//        if let image = dictionary["image"] as? UIImage{
+//            self.image = image;
+//        } else{
+//            self.image = #imageLiteral(resourceName: "Challah-Bread");
+//        }
         if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, String>{
             self.interestedIDs = interestedIDs;
         } else {

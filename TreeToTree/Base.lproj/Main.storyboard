@@ -1123,7 +1123,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Challah-Bread" translatesAutoresizingMaskIntoConstraints="NO" id="bwS-3m-uI7">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bwS-3m-uI7">
                                                                             <rect key="frame" x="7" y="0.0" width="100" height="90"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="90" id="JuE-4f-fet"/>
@@ -2160,7 +2160,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Challah-Bread" width="424" height="282"/>
         <image name="Mehran" width="100" height="100"/>
         <image name="Oval" width="28" height="28"/>
         <image name="afriendlyface" width="390" height="390"/>

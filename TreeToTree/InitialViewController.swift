@@ -35,7 +35,7 @@ class InitialViewController: UIViewController {
         self.signUpButton.layer.cornerRadius = self.signUpButton.frame.size.width / 20;
         passwordTextField.isSecureTextEntry = true //black dots, hides keys
         super.viewDidLoad()
-        //CreateEvents.addEvents()
+        CreateEvents.addEvents()
         //CreateUsers.addUsers()
         //Check if current user is saved from firebase
             // -if so, segue to browser

@@ -9,11 +9,17 @@
 import Foundation
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 
 class API {
     static let databaseReference: DatabaseReference = Database.database().reference()
     static let eventsReference = databaseReference.child("events")
     static let usersReference = databaseReference.child("users")
+    // firebase storage
+    static let storage = Storage.storage()
+    static let storageReference = storage.reference()
+    static let eventImagesReference = storageReference.child("eventPics")
+    
     
     class func createEvent(eventInfo: Dictionary<String, AnyObject>) /*-> Event*/ {
         let eventReference = eventsReference.childByAutoId()
@@ -32,19 +38,35 @@ class API {
         return //User(key: key, dictionary: eventInfo)
     }
     
-    class func getEventWithKey(_ key: String, completed: ((Event?) -> Void)?) {
-        eventsReference.child(key).observeSingleEvent(of: .value, with: { snapshot in
-            var event: Event?
-            
-            if let dictionary = snapshot.value as? Dictionary<String, AnyObject> {
-                NSLog("printing the dictionary used to create a new Event")
-                NSLog(String(describing: dictionary))
-                event = Event(key: key, dictionary: dictionary)
+    class func uploadProfileImage(key: String, image: UIImage, completed: ((URL?) -> Void)?) {
+        let thisImageReferences = eventImagesReference.child(key)
+        
+        let data = UIImageJPEGRepresentation(image, 0.1)!
+        let uploadTask = thisImageReferences.putData(data, metadata: nil, completion: { (metadata, error) in
+            guard let metadata = metadata else {
+                // Uh-oh, an error occurred!
+                return
             }
-            
-            completed?(event)
+            // Metadata contains file metadata such as size, content-type, and download URL.
+            let downloadURL = metadata.downloadURL()
+            completed?(downloadURL)
         })
     }
+
+    
+//    class func getEventWithKey(_ key: String, completed: ((Event?) -> Void)?) {
+//        eventsReference.child(key).observeSingleEvent(of: .value, with: { snapshot in
+//            var event: Event?
+//
+//            if let dictionary = snapshot.value as? Dictionary<String, AnyObject> {
+//                NSLog("printing the dictionary used to create a new Event")
+//                NSLog(String(describing: dictionary))
+//                event = Event(key: key, dictionary: dictionary)
+//            }
+//
+//            completed?(event)
+//        })
+//    }
     
     class func getEvents(completed:(([Event])->Void)?){
         eventsReference.observeSingleEvent(of: .value, with: {snapshot in
@@ -53,13 +75,37 @@ class API {
             if let dictionary = snapshot.value as? Dictionary<String, Dictionary<String, AnyObject>> {
                 NSLog("printing the dictionary used to create a new Event")
                 NSLog(String(describing: dictionary))
+                var count = dictionary.keys.count
                 for eventKey in dictionary.keys{
-                    let event = Event(key: eventKey, dictionary: dictionary[eventKey]!)
-                    events.append(event)
+                    // retreive image here and let event be in the completed function
+                    
+                    count = count - 1
+                    var profileImage: UIImage?
+                    var event = dictionary[eventKey];
+                    print(event)
+                    print(String(describing: event!["image_url"]!))
+                    let gsReference = API.storage.reference(forURL: String(describing: event!["image_url"]!))
+                    gsReference.getData(maxSize: 1 * 1024 * 1024, completion:  { data, error in
+                        if error != nil {
+                            // Uh-oh, an error occurred!
+                            NSLog("an error occured when downloading the image")
+                            print(error)
+                            profileImage = #imageLiteral(resourceName: "austinchow")
+                        } else {
+                            // Successfully gets and sets image
+                            print("successfully downloaded image")
+                            profileImage = UIImage(data: data!)
+                        }
+                
+                        let event = Event(key: eventKey, dictionary: event!, image: profileImage!)
+                        events.append(event)
+                        if count == 0 {
+                            completed?(events)
+                        }
+                    })
                 }
             }
             
-            completed?(events)
         })//look into live updating
     }
     
