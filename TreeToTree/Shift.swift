@@ -34,8 +34,11 @@ class Shift  {
         if let end = dictionary["end time"]{
             self.end = end as! String
         }
-        if let goingIDs = dictionary["goingIDs"]{
-            self.goingIDs = goingIDs as! [String]
+        self.goingIDs = [String]();
+        if let goingIDs = dictionary["goingIDs"] as? Dictionary<String, Int>{
+            for id in (goingIDs).keys{
+                self.goingIDs.append(id)
+            }
         }
    
     }

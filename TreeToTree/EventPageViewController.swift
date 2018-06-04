@@ -54,7 +54,6 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
             let shift = Shift(key: shiftKey, dictionary: (arrayElem?.shifts[shiftKey]!)!)
             shifts.append(shift)
         }
-        
         //adjust size of description label
 //        let maxSize = CGSize(width: 359, height: 1000)
 //        let size = eventSummary.sizeThatFits(maxSize)
@@ -77,17 +76,21 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
             fatalError("The dequeued cell is not an instance of ShiftCell.")
         }
         
-//        for shiftKey in (arrayElem?.shifts.keys)! {
-//            let shift = Shift(key: shiftKey, dictionary: (arrayElem?.shifts[shiftKey]!)!)
-//            shifts.append(shift)
-//        }
+        
         
         let shift = shifts[indexPath.row]
         
         //COME BACK LATER -SUZANNE
         cell.nameLabel.text = shift.name
         cell.timeLabel.text = shift.start + "-" + shift.end
-
+        cell.signUpButton.shiftID = shift.key
+        cell.signUpButton.eventID = arrayElem?.key
+        if currentUser?.goingIDs != nil,
+            currentUser?.goingIDs[(arrayElem?.key)!] != nil,
+            currentUser?.goingIDs[(arrayElem?.key)!]?[shift.key] != nil{
+            cell.signUpButton.backgroundColor = .gray
+            cell.signUpButton.setTitle("Signed Up!", for: .normal)
+        }
         
 //        for shift in (arrayElem?.shifts)! {
 //            self.shifts += shift;

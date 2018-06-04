@@ -133,6 +133,24 @@ class API {
             print ("Error signing out: %@", signOutError)
         }
     }
+    
+    class func signUpForShift(eventID: String, shiftID: String){
+        let eventShiftReference = eventsReference.child(eventID).child("shifts").child(shiftID).child("goingIDs")
+        eventShiftReference.child((currentUser?.key)!).setValue(0) //0 is dummy data
+        let userShiftReference = usersReference.child((currentUser?.key)!).child("goingIDs").child(eventID)
+        userShiftReference.child(shiftID).setValue(0) //0 is dummy data
+        
+        return
+    }
+    
+    class func signOutOfShift(eventID: String, shiftID: String){
+        let eventShiftReference = eventsReference.child(eventID).child("shifts").child(shiftID).child("goingIDs")
+        eventShiftReference.child((currentUser?.key)!).removeValue()
+        let userShiftReference = usersReference.child((currentUser?.key)!).child("goingIDs").child(eventID)
+        userShiftReference.child(shiftID).removeValue()
+        
+        return
+    }
 }
 
 
