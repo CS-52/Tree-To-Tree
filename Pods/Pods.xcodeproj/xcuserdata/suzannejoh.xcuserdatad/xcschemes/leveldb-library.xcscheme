@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2D3DDA0C774D28FE6612BAD42EB08E13"
-               BuildableName = "Pods_TreeToTree.framework"
-               BlueprintName = "Pods-TreeToTree"
+               BlueprintIdentifier = "3B08C49A396BAA0D9DCAD4460CC52F95"
+               BuildableName = "leveldb.framework"
+               BlueprintName = "leveldb-library"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,9 +47,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2D3DDA0C774D28FE6612BAD42EB08E13"
-            BuildableName = "Pods_TreeToTree.framework"
-            BlueprintName = "Pods-TreeToTree"
+            BlueprintIdentifier = "3B08C49A396BAA0D9DCAD4460CC52F95"
+            BuildableName = "leveldb.framework"
+            BlueprintName = "leveldb-library"
             ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
