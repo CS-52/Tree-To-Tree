@@ -1131,7 +1131,7 @@
                                                                             </constraints>
                                                                         </imageView>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday April 15, 4:30-7:30 PM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WCu-2R-GqB">
-                                                                            <rect key="frame" x="114" y="7" width="245" height="14"/>
+                                                                            <rect key="frame" x="114" y="0.0" width="245" height="14"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="14" id="BCw-vD-dnO"/>
                                                                             </constraints>
@@ -1149,7 +1149,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 shifts available" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvj-MD-FSc">
-                                                                            <rect key="frame" x="114" y="46" width="230" height="20"/>
+                                                                            <rect key="frame" x="114" y="39" width="230" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="20" id="DqD-q9-Ukc"/>
                                                                             </constraints>
@@ -1158,7 +1158,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jose, Michelle, Julie, and 5 others" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DuE-UT-Dtb">
-                                                                            <rect key="frame" x="114" y="67" width="230" height="20"/>
+                                                                            <rect key="frame" x="114" y="60" width="230" height="20"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="20" id="1S6-3r-T0I"/>
                                                                             </constraints>
@@ -1196,7 +1196,7 @@
                                                                         <constraint firstAttribute="trailingMargin" secondItem="hvj-MD-FSc" secondAttribute="trailing" constant="16" id="lu8-oh-IAm"/>
                                                                         <constraint firstItem="JYl-dq-id0" firstAttribute="top" secondItem="oql-YK-UPp" secondAttribute="topMargin" constant="5" id="nNv-dK-Pc9"/>
                                                                         <constraint firstAttribute="trailingMargin" secondItem="DuE-UT-Dtb" secondAttribute="trailing" constant="16" id="qBx-1T-CQr"/>
-                                                                        <constraint firstItem="WCu-2R-GqB" firstAttribute="top" secondItem="oql-YK-UPp" secondAttribute="top" constant="7" id="rQR-tN-Hhc"/>
+                                                                        <constraint firstItem="WCu-2R-GqB" firstAttribute="top" secondItem="oql-YK-UPp" secondAttribute="top" id="rQR-tN-Hhc"/>
                                                                         <constraint firstItem="WCu-2R-GqB" firstAttribute="leading" secondItem="bwS-3m-uI7" secondAttribute="trailing" constant="7" id="sRv-HH-IAL"/>
                                                                     </constraints>
                                                                 </tableViewCellContentView>

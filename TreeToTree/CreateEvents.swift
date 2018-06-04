@@ -57,6 +57,49 @@ class CreateEvents {
             "organization": organization1
         ]
         
+        //EVENT 1 
+        let name2 = "Challah Bake"
+        let date2 = Date.init()
+        let location2 = "Hillel"
+        let shifts2 = [
+            "0000": [
+                "name": "Dough-Making",
+                "start time": "6:00 pm",
+                "end time": "7:20 pm"
+            ],
+            "0001": [
+                "name": "Baking",
+                "start time": "7:30 pm",
+                "end time": "9:00 pm",
+            ]
+        ]
+        
+        let interestedIDs2=[String]()
+        let goingIDs2 = [
+            "0000": [
+                "shifts": ["0000", "0001"]
+            ],
+            "0001": [
+                "shifts": ["0001"]
+            ]
+        ]
+        let description2 = "Come bake some challah!\n It's gonna be lit"
+        let organization2 = "Challah for Hunger"
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE MMMM d, y h:mm"
+        
+        let eventInfo0: [String: Any] = [
+            "name": name2,
+            "date": dateFormatter.string(from: date2),
+            "location": location2,
+            "shifts": shifts2,
+            "goingIDs": goingIDs2,
+            "interestedIDs": interestedIDs2,
+            "description": description2,
+            "organization": organization2
+        ]
+        
         API.createEvent(eventInfo: eventInfo0 as Dictionary<String, AnyObject>)
         
     }
