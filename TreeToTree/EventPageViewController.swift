@@ -10,6 +10,8 @@ import UIKit
 
 class EventPageViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var viewHeightConstraint: NSLayoutConstraint!
+    @IBOutlet weak var shiftsTableViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var eventSummary: UILabel!
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
@@ -54,10 +56,15 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
             let shift = Shift(key: shiftKey, dictionary: (arrayElem?.shifts[shiftKey]!)!)
             shifts.append(shift)
         }
-        //adjust size of description label
-//        let maxSize = CGSize(width: 359, height: 1000)
-//        let size = eventSummary.sizeThatFits(maxSize)
-//        eventSummary.frame = CGRect(size: size)
+        
+        //Dynamically updating view constraints
+        let shiftsCount = shifts.count
+        let shiftsHeight = shiftsCount * 50
+        shiftsTableViewHeightConstraint.constant = CGFloat(shiftsHeight)
+        let newViewHeight = viewHeightConstraint.constant + CGFloat(shiftsHeight)
+        viewHeightConstraint.constant = CGFloat(newViewHeight)
+        self.updateViewConstraints()
+        
     }
     
     override func didReceiveMemoryWarning() {

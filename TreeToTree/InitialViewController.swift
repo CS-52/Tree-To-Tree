@@ -13,6 +13,9 @@ var currentUser: User?
 //have a did set method for user
 
 class InitialViewController: UIViewController {
+    
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -31,17 +34,43 @@ class InitialViewController: UIViewController {
         }
     }
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.loginButton.layer.cornerRadius = self.loginButton.frame.size.width / 20;
         self.signUpButton.layer.cornerRadius = self.signUpButton.frame.size.width / 20;
         passwordTextField.isSecureTextEntry = true //black dots, hides keys
-        super.viewDidLoad()
+    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))) //This will hide the keyboard
+        
+        //toggles scroll view when keyboard is shown
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        
+        //does not work for some reason
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        
         CreateEvents.addEvents()
         //CreateUsers.addUsers()
         //Check if current user is saved from firebase
             // -if so, segue to browser
             // -else do nothing
     }
-
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        let info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+    
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            self.bottomConstraint.constant = keyboardFrame.size.height + 20
+        })
+    }
+    
+    //does not work for some reason
+    func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            self.bottomConstraint.constant = 0
+        })
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -78,15 +107,6 @@ class InitialViewController: UIViewController {
     }
     
     
-//    override func unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController) {
-//        
-//        
-//        UnwindRightToLeft(identifier: "logout", source: self, destination: subsequentVC)
-//        
-//        
-//        
-////        return super.unwind(for unwindSegue: UIStoryboardSegue, towardsViewController subsequentVC: UIViewController)
-//    }
     
 
 }

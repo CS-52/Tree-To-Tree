@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpViewController: UIViewController {
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var createAccountButton: UIButton!
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var firstNameTextField: UITextField!
@@ -44,21 +45,47 @@ class SignUpViewController: UIViewController {
         self.present(tutorialController!, animated: true)
     }
    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true) //This will hide the keyboard
-    }
+//    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+//        self.view.endEditing(true) //This will hide the keyboard
+//    }
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         self.createAccountButton.layer.cornerRadius = self.createAccountButton.frame.size.width / 12;
         passwordTextField.isSecureTextEntry = true //black dots, hides keys
-        super.viewDidLoad()
+    self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing(_:)))) //This will hide the keyboard
+        
+        //toggles scroll view when keyboard is shown
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: .UIKeyboardWillShow, object: nil)
+        
+        //does not work for some reason
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
+        
         //createAccountButton.layer.cornerRadius = createAccountButton.frame.size.width / 2;
         // Do any additional setup after loading the view.
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        
+        let info = notification.userInfo!
+        let keyboardFrame: CGRect = (info[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            self.bottomConstraint.constant = keyboardFrame.size.height + 20
+        })
+    }
+    
+    //does not work for some reason
+    func keyboardWillHide(notification: NSNotification) {
+        UIView.animate(withDuration: 0.1, animations: { () -> Void in
+            self.bottomConstraint.constant = 0
+        })
     }
     
 
