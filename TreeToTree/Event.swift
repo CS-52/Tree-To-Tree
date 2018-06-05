@@ -55,8 +55,8 @@ class Event  {
 //        } else{
 //            self.image = #imageLiteral(resourceName: "Challah-Bread");
 //        }
-        interestedIDs = [String]()
-        if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, Any>{
+        interestedIDs = [String]() // -----> nice spelling, lol -suzanne 
+        if let interestedIDs = dictionary["intestedIDs"] as? Dictionary<String, Any>{
             for userID in interestedIDs.keys{
                 self.interestedIDs.append(userID)
             }
@@ -70,13 +70,16 @@ class Event  {
         goingIDs = [String]()
         
         for key in self.shifts.keys {
-            let shiftGoing = shifts[key]?["goingIDs"] as? Dictionary<String, String>
+            let shiftGoing = shifts[key]?["goingIDs"] as? Dictionary<String, Any>
             if(shiftGoing != nil){
-                for ID in (shiftGoing?.values)! {
+                for ID in (shiftGoing?.keys)! {
+                 print("GOING ID" + ID)
                  goingIDs.append(ID)
                 }
             }
         }
+        print("GOING!!!!")
+        print(goingIDs)
     }
 }
 

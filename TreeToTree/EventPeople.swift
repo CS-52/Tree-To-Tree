@@ -11,18 +11,29 @@ import UIKit
 class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var curEvent:Event?
-    var peopleGoing = [User]()
-    var peopleInterested = [User]()
     
     @IBOutlet weak var peopleTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    
+    var peopleGoing = [User](){
+        didSet {
+            peopleTableView.reloadData()
+        }
+    }
+        
+    var peopleInterested = [User](){
+        didSet {
+            peopleTableView.reloadData()
+        }
+    }
+        
+    
     @IBAction func segControlActionChanged(_ sender: Any) {
         peopleTableView.reloadData();
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var returnValue = 0
-        
         switch(segmentedControl.selectedSegmentIndex)
         {
         case 0:
@@ -38,90 +49,92 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         let cellIdentifier = "eventPersonCell"
         
         guard let personCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventPersonCell  else {
             fatalError("The dequeued cell is not an instance of EventPersonCell.")
         }
         
+        //round icon
+        personCell.personImg.layer.cornerRadius = personCell.personImg.frame.size.width / 2;
+        
         switch(segmentedControl.selectedSegmentIndex)
         {
         case 0:
+            
             let going = peopleGoing[indexPath.row]
-            //person cell corresponds to people going
             personCell.personName.text = going.firstName + " " + going.lastName
-            personCell.personImg.image = going.image
+           // personCell.personImg.image = going.image
             break
         case 1:
             let interested = peopleInterested[indexPath.row]
-            //person cell corresponds to people interested
             personCell.personName.text = interested.firstName + " " + interested.lastName
-            personCell.personImg.image = interested.image
+        
+           // personCell.personImg.image = interested.image
             break
             
         default:
-            let going = peopleGoing[indexPath.row]
-            //person cell corresponds to people going
-            personCell.personName.text = going.firstName + " " + going.lastName
-            personCell.personImg.image = going.image
             break
         }
         return personCell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-//        performSegue(withIdentifier: "segue", sender: self)
-//        tableView.deselectRow(at: indexPath, animated: true)
-    }
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//
+////        performSegue(withIdentifier: "segue", sender: self)
+////        tableView.deselectRow(at: indexPath, animated: true)
+//    }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        peopleTableView.delegate = self
+        peopleTableView.dataSource = self
         
-
+        
+        //populate people going array
         for goingId in (curEvent?.goingIDs)! {
             //load a user with goingId
-            API.getUserWithKey(goingId, completed: {User in
+            print(goingId)
+            API.getUserWithKey(goingId, completed: {user in
                 print("got going user")
-                print(User!)
-                self.peopleGoing.append(User!)
+                self.peopleGoing.append((user)!)
             })
         }
         
         //populate people interested array
         for interestedId in (curEvent?.interestedIDs)! {
             //load a user with interestedId
-            API.getUserWithKey(interestedId, completed: {User in
+            API.getUserWithKey(interestedId, completed: {user in
                 print("got interested user")
-                print(User!)
-                self.peopleInterested.append(User!)
+                self.peopleInterested.append((user)!)
             })
         }
 
         //Dynamically updating view constraints
-        switch(segmentedControl.selectedSegmentIndex)
-        {
-        case 0:
-            let goingCount = peopleGoing.count
-            let goingHeight = goingCount * 50 //height of each cell
-            //update height constraint for table view
-            //edit to scroll view
-            //self.updateViewConstraints()
-            break
-        case 1:
-            let interestedCount = peopleInterested.count
-            let interestedHeight = interestedCount * 50 //height of each cell
-            //update height constraint for table view
-            //edit to scroll view
-            //self.updateViewConstraints()
-            break
-            
-        default:
-            break
-            
-        }
+//        switch(segmentedControl.selectedSegmentIndex)
+//        {
+//        case 0:
+//            let goingCount = peopleGoing.count
+//            let goingHeight = goingCount * 50 //height of each cell
+//            //update height constraint for table view
+//            //edit to scroll view
+//            //self.updateViewConstraints()
+//            break
+//        case 1:
+//            let interestedCount = peopleInterested.count
+//            let interestedHeight = interestedCount * 50 //height of each cell
+//            //update height constraint for table view
+//            //edit to scroll view
+//            //self.updateViewConstraints()
+//            break
+//
+//        default:
+//            break
+//
+//        }
         
     }
     

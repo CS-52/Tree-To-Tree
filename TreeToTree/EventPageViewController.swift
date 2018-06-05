@@ -109,6 +109,8 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? EventPeople {
             destination.curEvent = arrayElem
+            print("cur event is ")
+            print(arrayElem?.name)
         }
     }
     
