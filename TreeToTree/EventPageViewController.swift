@@ -64,6 +64,9 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
         let newViewHeight = viewHeightConstraint.constant + CGFloat(shiftsHeight)
         viewHeightConstraint.constant = CGFloat(newViewHeight)
         self.updateViewConstraints()
+        API.getEventWithKey((arrayElem?.key)!) { (event) in
+            self.arrayElem = event
+        }
         
     }
     

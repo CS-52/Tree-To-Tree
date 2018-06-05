@@ -125,6 +125,33 @@ class API {
         })
     }
     
+    class func getEventWithKey(_ key: String, completed: ((Event?) -> Void)?) {
+        eventsReference.child(key).observe(DataEventType.value, with: { snapshot in
+            var event: Event?
+            
+            if let dictionary = snapshot.value as? Dictionary<String, AnyObject> {
+                var profileImage: UIImage?
+                let gsReference = API.storage.reference(forURL: String(describing: dictionary["image_url"]!))
+                gsReference.getData(maxSize: 1 * 1024 * 1024, completion:  { data, error in
+                    if error != nil {
+                        // Uh-oh, an error occurred!
+                        NSLog("an error occured when downloading the image")
+                        //print(error)
+                        profileImage = #imageLiteral(resourceName: "austinchow")
+                    } else {
+                        // Successfully gets and sets image
+                        print("successfully downloaded image")
+                        profileImage = UIImage(data: data!)
+                    }
+                    
+                    event = Event(key: key, dictionary: dictionary, image: profileImage!)
+                    completed?(event)
+                })
+            }
+        })
+    }
+
+    
     class func signUpUser(userInfo: Dictionary<String, Any>, password: String, signUpPage: SignUpViewController) {
         //Need better error checking
         Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: password ) { (authResult, error) in
