@@ -32,10 +32,10 @@ class API {
         return //User(key: key, dictionary: eventInfo)
     }
     
-    class func createUserWithKey(_ key:String, userInfo: Dictionary<String, Any>) /*-> User*/ {
+    class func createUserWithKey(_ key:String, userInfo: Dictionary<String, Any>) -> User {
         let userReference = usersReference.child(key)
         userReference.setValue(userInfo)
-        return //User(key: key, dictionary: eventInfo)
+        return User(key: key, dictionary: userInfo as Dictionary<String, AnyObject>)
     }
     
     class func uploadProfileImage(key: String, image: UIImage, completed: ((URL?) -> Void)?) {
@@ -82,14 +82,14 @@ class API {
                     count = count - 1
                     var profileImage: UIImage?
                     var event = dictionary[eventKey];
-                    print(event)
+                    //print(event)
                     print(String(describing: event!["image_url"]!))
                     let gsReference = API.storage.reference(forURL: String(describing: event!["image_url"]!))
                     gsReference.getData(maxSize: 1 * 1024 * 1024, completion:  { data, error in
                         if error != nil {
                             // Uh-oh, an error occurred!
                             NSLog("an error occured when downloading the image")
-                            print(error)
+                            //print(error)
                             profileImage = #imageLiteral(resourceName: "austinchow")
                         } else {
                             // Successfully gets and sets image
@@ -129,7 +129,7 @@ class API {
         Auth.auth().createUser(withEmail: userInfo["email"] as! String, password: password ) { (authResult, error) in
             if(authResult != nil){
               print("created New User")
-              createUserWithKey((authResult?.uid)!, userInfo: userInfo)
+              currentUser = createUserWithKey((authResult?.uid)!, userInfo: userInfo)
               signUpPage.beginTutorial()
             }else{
                 signUpPage.showAlert(errorString: (error?.localizedDescription)!)
@@ -142,7 +142,6 @@ class API {
             if(user != nil){
                 getUserWithKey((user?.uid)!, completed: { (user) in
                     currentUser = user
-                    print(currentUser!)
                 })
                 loginPage.moveToEventsPage()
             } else{
@@ -201,6 +200,8 @@ class API {
         }
         return
     }
+    
+
 }
 
 
