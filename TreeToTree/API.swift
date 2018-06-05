@@ -185,7 +185,9 @@ class API {
         eventShiftReference.child((currentUser?.key)!).setValue(0) //0 is dummy data
         let userShiftReference = usersReference.child((currentUser?.key)!).child("goingIDs").child(eventID)
         userShiftReference.child(shiftID).setValue(0) //0 is dummy data
-        
+        getUserWithKey((currentUser?.key)!) { (user) in
+            currentUser = user
+        }
         return
     }
     
@@ -194,7 +196,9 @@ class API {
         eventShiftReference.child((currentUser?.key)!).removeValue()
         let userShiftReference = usersReference.child((currentUser?.key)!).child("goingIDs").child(eventID)
         userShiftReference.child(shiftID).removeValue()
-        
+        getUserWithKey((currentUser?.key)!) { (user) in
+            currentUser = user
+        }
         return
     }
 }

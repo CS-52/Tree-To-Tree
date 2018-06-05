@@ -18,7 +18,7 @@ class User {
     var hours: Int!
     var badgesIDs: Dictionary<String, String>!
     var friendsIDs: Dictionary<String, String>!
-    var goingIDs: Dictionary<String, Dictionary<String, String>>!
+    var goingIDs: Dictionary<String, Dictionary<String, Any>>!
     var interestedIDs: Dictionary<String,String>!
     
     
@@ -49,7 +49,7 @@ class User {
         if let friendsIDs = dictionary["friends"] as? Dictionary<String, String>{
             self.friendsIDs = friendsIDs
         }
-        if let goingIDs = dictionary["goingIDs"] as? Dictionary<String, Dictionary<String, String>>{
+        if let goingIDs = dictionary["goingIDs"] as? Dictionary<String, Dictionary<String, Any>>{
             self.goingIDs = goingIDs
         }
         if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, String>{

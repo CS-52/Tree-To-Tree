@@ -46,7 +46,7 @@ class InitialViewController: UIViewController {
         //does not work for some reason
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: .UIKeyboardWillHide, object: nil)
         
-        CreateEvents.addEvents()
+        //CreateEvents.addEvents()
         //CreateUsers.addUsers()
         //Check if current user is saved from firebase
             // -if so, segue to browser

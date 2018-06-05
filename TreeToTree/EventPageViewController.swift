@@ -92,9 +92,12 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.timeLabel.text = shift.start + "-" + shift.end
         cell.signUpButton.shiftID = shift.key
         cell.signUpButton.eventID = arrayElem?.key
+        print("Printing currentUser in shift class.")
+        print(currentUser ?? "no current user")
         if currentUser?.goingIDs != nil,
             currentUser?.goingIDs[(arrayElem?.key)!] != nil,
-            currentUser?.goingIDs[(arrayElem?.key)!]?[shift.key] != nil{
+            let shiftsGoing = currentUser?.goingIDs[(arrayElem?.key)!],
+            shiftsGoing[shift.key] != nil{
             cell.signUpButton.backgroundColor = .gray
             cell.signUpButton.setTitle("Signed Up!", for: .normal)
         }

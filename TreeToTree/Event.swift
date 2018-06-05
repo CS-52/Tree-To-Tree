@@ -45,7 +45,7 @@ class Event  {
         if let location = dictionary["location"] as? String{
             self.location = location
         }
-        if let shifts = dictionary["shifts"] as? Dictionary<String, Dictionary<String, String>>{
+        if let shifts = dictionary["shifts"] as? Dictionary<String, Dictionary<String, Any>>{
             self.shifts = shifts;
         }else{
             self.shifts = Dictionary<String, Dictionary<String, String>>();
