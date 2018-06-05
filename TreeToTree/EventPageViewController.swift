@@ -102,16 +102,14 @@ class EventPageViewController: UIViewController, UITableViewDelegate, UITableVie
             cell.signUpButton.setTitle("Signed Up!", for: .normal)
         }
         
-//        for shift in (arrayElem?.shifts)! {
-//            self.shifts += shift;
-//        }
-
-        
-        
-        
         return cell
-        
-        
+    }
+    
+    //SEGUE STUFF -- to populate event people going/interested
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? EventPeople {
+            destination.curEvent = arrayElem
+        }
     }
     
     
