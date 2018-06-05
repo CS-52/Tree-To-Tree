@@ -2095,7 +2095,6 @@
                                 </segments>
                                 <color key="tintColor" red="0.40807205438613892" green="0.86623078584671021" blue="0.72757750749588013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
-                                    <action selector="indexChanged:" destination="qDv-2c-oPv" eventType="valueChanged" id="f6u-c0-BJ2"/>
                                     <action selector="segControlActionChanged:" destination="qDv-2c-oPv" eventType="valueChanged" id="BUd-FU-ZVf"/>
                                 </connections>
                             </segmentedControl>

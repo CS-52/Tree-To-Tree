@@ -70,13 +70,16 @@ class Event  {
         goingIDs = [String]()
         
         for key in self.shifts.keys {
-            let shiftGoing = shifts[key]?["goingIDs"] as? Dictionary<String, String>
+            let shiftGoing = shifts[key]?["goingIDs"] as? Dictionary<String, Any>
             if(shiftGoing != nil){
-                for ID in (shiftGoing?.values)! {
+                for ID in (shiftGoing?.keys)! {
+                 print("GOING ID" + ID)
                  goingIDs.append(ID)
                 }
             }
         }
+        print("GOING!!!!")
+        print(goingIDs)
     }
 }
 

@@ -112,15 +112,15 @@ class API {
     
     class func getUserWithKey(_ key: String, completed: ((User?) -> Void)?) {
         usersReference.child(key).observeSingleEvent(of: .value, with: { snapshot in
-            var event: User?
+            var user: User?
             
             if let dictionary = snapshot.value as? Dictionary<String, AnyObject> {
                 NSLog("printing the dictionary used to create a new Event")
                 NSLog(String(describing: dictionary))
-                event = User(key: key, dictionary: dictionary)
+                user = User(key: key, dictionary: dictionary)
             }
             
-            completed?(event)
+            completed?(user)
         })
     }
     
