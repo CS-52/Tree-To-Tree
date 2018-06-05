@@ -10,11 +10,17 @@ import UIKit
 
 class UserFriendsTableViewController: UITableViewController {
     
-    var friendsArray = [User]()
+    struct Friend {
+        var name: String;
+        var image: UIImage;
+    }
+    
+    
+    var friendsArray = [Friend]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       // loadSamplePeople();
+        loadSamplePeople();
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
@@ -48,7 +54,7 @@ class UserFriendsTableViewController: UITableViewController {
         // Configure the cell...
         let friend = friendsArray[indexPath.row]
         cell.personImg.image = friend.image
-        cell.personName.text = friend.firstName
+        cell.personName.text = friend.name
         cell.personImg.layer.cornerRadius = cell.personImg.frame.size.width / 2;
 
         return cell
@@ -94,6 +100,7 @@ class UserFriendsTableViewController: UITableViewController {
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
+    /*
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destination = segue.destination as? ProfilePageViewController {
             destination.person = friendsArray[(tableView.indexPathForSelectedRow?.row)!]
@@ -101,7 +108,7 @@ class UserFriendsTableViewController: UITableViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    
+    */
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         //let selectedIndex = indexPath.row
@@ -109,17 +116,16 @@ class UserFriendsTableViewController: UITableViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-  /*  private func loadSamplePeople() {
+  private func loadSamplePeople() {
         let photo = UIImage(named: "austinchow")
-        let person1 = User(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
-        let person2 = User(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
-        let person3 = User(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
-        let person4 = User(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
-        let person5 = User(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
+        let person2 = Friend(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
+        let person3 = Friend(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
+        let person4 = Friend(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
+        let person5 = Friend(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
      
-        friendsArray += [person1, person2, person3, person4, person5]
+        friendsArray += [person2, person3, person4, person5]
      
-    } */
+    }
     
 
 }

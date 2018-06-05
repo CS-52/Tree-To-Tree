@@ -6,4 +6,15 @@
 //  Copyright © 2018 CS+Social Good. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+class UserProfileCell: UITableViewCell {
+    
+    @IBOutlet weak var eventDate: UILabel!
+    
+    @IBOutlet weak var eventName: UILabel!
+    
+    @IBOutlet weak var eventImage: UIImageView!
+    
+}
+

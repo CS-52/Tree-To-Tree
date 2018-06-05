@@ -69,12 +69,11 @@ class GroupPageViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     private func loadSampleGroups() {
-        let photo = UIImage(named: "afriendlyface")
-        let group1 = Group(name: "Austin Chow", image: #imageLiteral(resourceName: "austinchow"))
-        let group2 = Group(name: "Suzanne Joh", image: #imageLiteral(resourceName: "suzannejoh"))
-        let group3 = Group(name: "Keith Schwartz", image: #imageLiteral(resourceName: "afriendlyface"))
-        let group4 = Group(name: "Chris Piech", image: #imageLiteral(resourceName: "piech"))
-        let group5 = Group(name: "Mehran Sahami", image: #imageLiteral(resourceName: "Mehran"))
+        let group1 = Group(name: "cynthia LEEave a message", image: #imageLiteral(resourceName: "cyn"))
+        let group2 = Group(name: "(cs10)7 deadly CYNthiaS", image: #imageLiteral(resourceName: "cynlee"))
+        let group3 = Group(name: "Keith Schwartz and Sweet", image: #imageLiteral(resourceName: "afriendlyface"))
+        let group4 = Group(name: "Rest in Pieches", image: #imageLiteral(resourceName: "piech"))
+        let group5 = Group(name: "mehrun forrest run", image: #imageLiteral(resourceName: "Mehran"))
         
         groupsArray += [group1, group2, group3, group4, group5]
         
