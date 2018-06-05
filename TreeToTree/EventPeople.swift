@@ -61,32 +61,48 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*
-        
-        //populate both people arrays
-        
-        //populate shifts
+
         for goingId in (curEvent?.goingIDs)! {
-            //load sample user
-            API.getUserWithKey(key: goingId, completed: {user in
-                print("got user")
-                print(user)
-                self.peopleGoing += user
-                
+            //load a user with goingId
+            API.getUserWithKey(goingId, completed: {User in
+                print("got going user")
+                print(User!)
+                self.peopleGoing.append(User!)
             })
-    
-            let user = User(key: goingId, dictionary: (arrayElem?.shifts[shiftKey]!)!)
-            shifts.append(shift)
         }
         
+        //populate people interested array
+        for interestedId in (curEvent?.interestedIDs)! {
+            //load a user with interestedId
+            API.getUserWithKey(interestedId, completed: {User in
+                print("got interested user")
+                print(User!)
+                self.peopleInterested.append(User!)
+            })
+        }
+
         //Dynamically updating view constraints
-        let shiftsCount = shifts.count
-        let shiftsHeight = shiftsCount * 50
-        shiftsTableViewHeightConstraint.constant = CGFloat(shiftsHeight)
-        let newViewHeight = viewHeightConstraint.constant + CGFloat(shiftsHeight)
-        viewHeightConstraint.constant = CGFloat(newViewHeight)
-        self.updateViewConstraints()
-        
+        switch(segmentedControl.selectedSegmentIndex)
+        {
+        case 0:
+            let goingCount = peopleGoing.count
+            let goingHeight = goingCount * 50 //height of each cell
+            //update height constraint for table view
+            //edit to scroll view
+            //self.updateViewConstraints()
+            break
+        case 1:
+            let interestedCount = peopleInterested.count
+            let interestedHeight = interestedCount * 50 //height of each cell
+            //update height constraint for table view
+            //edit to scroll view
+            //self.updateViewConstraints()
+            break
+            
+        default:
+            break
+            
+        }
         
     }
     
@@ -94,6 +110,5 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    */
-    }
+
 }

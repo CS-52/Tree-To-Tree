@@ -127,6 +127,12 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         cell.eventName.text = event.name
         cell.shifts.text = "\(event.shifts.count) shifts available."
         cell.peopleGoing.text = "\(event.goingIDs.count) people going."
+        cell.interested.eventID = event.key
+        if currentUser != nil,
+            currentUser?.interestedIDs != nil,
+            currentUser?.interestedIDs[event.key] != nil {
+            cell.interested.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
+        }
     
         
         return cell
