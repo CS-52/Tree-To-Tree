@@ -10,11 +10,15 @@ import UIKit
 
 class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    var curEvent:Event?
     var peopleGoing = [User]()
     var peopleInterested = [User]()
     
     @IBOutlet weak var peopleTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBAction func segControlActionChanged(_ sender: Any) {
+        peopleTableView.reloadData();
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         var returnValue = 0
@@ -56,7 +60,34 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+            
+        
+        //populate both people arrays
+        
+        //populate shifts
+        for goingId in (curEvent?.goingIDs)! {
+            //load sample user
+            API.getUserWithKey(key: goingId, completed: {user in
+                print("got user")
+                print(user)
+                self.peopleGoing += user
+                
+            })
+    
+            let user = User(key: goingId, dictionary: (arrayElem?.shifts[shiftKey]!)!)
+            shifts.append(shift)
+        }
+        
+        //Dynamically updating view constraints
+        let shiftsCount = shifts.count
+        let shiftsHeight = shiftsCount * 50
+        shiftsTableViewHeightConstraint.constant = CGFloat(shiftsHeight)
+        let newViewHeight = viewHeightConstraint.constant + CGFloat(shiftsHeight)
+        viewHeightConstraint.constant = CGFloat(newViewHeight)
+        self.updateViewConstraints()
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
