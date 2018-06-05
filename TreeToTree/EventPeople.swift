@@ -56,7 +56,7 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        //populate both people arrays
     }
     
     override func didReceiveMemoryWarning() {
