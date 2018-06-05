@@ -69,10 +69,11 @@ class API {
 //    }
     
     class func getEvents(completed:(([Event])->Void)?){
-        eventsReference.observeSingleEvent(of: .value, with: {snapshot in
+        eventsReference.observe/*SingleEvent*/(DataEventType.value/*of: .value*/, with: {snapshot in
             var events: [Event] = []
             
             if let dictionary = snapshot.value as? Dictionary<String, Dictionary<String, AnyObject>> {
+                print ("updating events")
                 NSLog("printing the dictionary used to create a new Event")
                 NSLog(String(describing: dictionary))
                 var count = dictionary.keys.count

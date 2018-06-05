@@ -38,6 +38,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     
     var eventsArray = [Event](){
         didSet {
+            eventsArray.sort(by: {$0.name < $1.name})
             tableView.reloadData()
             
         }
@@ -132,6 +133,8 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
             currentUser?.interestedIDs != nil,
             currentUser?.interestedIDs[event.key] != nil {
             cell.interested.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
+        } else{
+            cell.interested.setImage(#imageLiteral(resourceName: "heartOutline"), for: .normal)
         }
     
         

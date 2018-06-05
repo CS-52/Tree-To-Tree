@@ -6,49 +6,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "TreeToTree/EventPeople.swift"
-            timestampString = "549874378.557205"
+            filePath = "TreeToTree/EventBrowserController.swift"
+            timestampString = "549922820.752686"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "132"
+            endingLineNumber = "132"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TreeToTree.EventPeople.viewDidLoad () -&gt; ()"
-                  moduleName = "TreeToTree"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jose/Documents/TreeToTree/TreeToTree/TreeToTree/EventPeople.swift"
-                  timestampString = "549874379.413893"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "757">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TreeToTree.EventPeople.viewDidLoad () -&gt; ()"
-                  moduleName = "TreeToTree"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/Jose/Documents/TreeToTree/TreeToTree/TreeToTree/EventPeople.swift"
-                  timestampString = "549874379.416449"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "97"
-                  endingLineNumber = "97"
-                  offsetFromSymbolStart = "2160">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

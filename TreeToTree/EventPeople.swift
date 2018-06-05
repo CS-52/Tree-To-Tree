@@ -15,6 +15,7 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
     @IBOutlet weak var peopleTableView: UITableView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    
     var peopleGoing = [User](){
         didSet {
             peopleTableView.reloadData()
@@ -93,7 +94,7 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
         peopleTableView.delegate = self
         peopleTableView.dataSource = self
         
-        
+        /*
         //populate people going array
         for goingId in (curEvent?.goingIDs)! {
             //load a user with goingId
@@ -102,7 +103,8 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 print("got going user")
                 self.peopleGoing.append((user)!)
             })
-        }
+        }*/
+        populateUserArray(userIDs: (curEvent?.goingIDs)!)
         
         //populate people interested array
         for interestedId in (curEvent?.interestedIDs)! {
@@ -112,6 +114,8 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
                 self.peopleInterested.append((user)!)
             })
         }
+    
+       // populateUserArray(userIDs: (curEvent?.interestedIDs)!)
 
         //Dynamically updating view constraints
 //        switch(segmentedControl.selectedSegmentIndex)
@@ -141,6 +145,17 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func populateUserArray(userIDs: [String]){
+        for goingId in userIDs {
+            //load a user with goingId
+            print(goingId)
+            API.getUserWithKey(goingId, completed: {user in
+                print("got going user")
+                self.peopleGoing.append((user)!)
+            })
+        }
     }
 
 }
