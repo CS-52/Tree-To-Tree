@@ -14,6 +14,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     @IBOutlet weak var searchIcon: UIBarButtonItem!
     
     @IBOutlet weak var goBackButton: UIButton!
+    @IBOutlet weak var sideMenuName: UITextField!
     @IBOutlet var mainView: UIView!
     
     @IBOutlet weak var tableView: UITableView!
@@ -43,6 +44,7 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
     }
     
     @IBAction func showMenu(_ sender: Any) {
+        self.sideMenuName.text = ((currentUser?.firstName)! + " " + (currentUser?.lastName)!);
         if (menuShowing) {
             leadingConstraint.constant = 0
             trailingConstraint.constant = 0
@@ -126,7 +128,11 @@ class EventBrowserController: UIViewController, UITableViewDelegate, UITableView
         cell.shifts.text = "\(event.shifts.count) shifts available."
         cell.peopleGoing.text = "\(event.goingIDs.count) people going."
         cell.interested.eventID = event.key
-        
+        if currentUser != nil,
+            currentUser?.interestedIDs != nil,
+            currentUser?.interestedIDs[event.key] != nil {
+            cell.interested.setImage(#imageLiteral(resourceName: "heart"), for: .normal)
+        }
     
         
         return cell

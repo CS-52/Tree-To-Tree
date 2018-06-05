@@ -80,7 +80,7 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //populate people going array
+
         for goingId in (curEvent?.goingIDs)! {
             //load a user with goingId
             API.getUserWithKey(goingId, completed: {User in
@@ -129,6 +129,5 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+
 }
