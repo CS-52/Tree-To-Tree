@@ -201,6 +201,28 @@ class API {
         return
     }
     
+    class func setCurrUserInterested(eventID: String){
+        let eventReference = eventsReference.child(eventID).child("intestedIDs")
+        eventReference.child((currentUser?.key)!).setValue(0)
+        let userReference = usersReference.child((currentUser?.key)!).child("interestedIDs")
+        userReference.child(eventID).setValue(0)
+        getUserWithKey((currentUser?.key)!) { (user) in
+            currentUser = user
+        }
+        return
+    }
+    
+    class func setCurrUserUninterested(eventID: String){
+        let eventReference = eventsReference.child(eventID).child("intestedIDs")
+        eventReference.child((currentUser?.key)!).removeValue()
+        let userReference = usersReference.child((currentUser?.key)!).child("interestedIDs")
+        userReference.child(eventID).removeValue()
+        getUserWithKey((currentUser?.key)!) { (user) in
+            currentUser = user
+        }
+        return
+    }
+    
 
 }
 
