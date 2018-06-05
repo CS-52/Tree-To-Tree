@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource {
+class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var curEvent:Event?
     var peopleGoing = [User]()
@@ -38,22 +38,41 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let personCell = peopleTableView.dequeueReusableCell(withIdentifier: "eventPersonCell", for: indexPath)
+        let cellIdentifier = "eventPersonCell"
+        
+        guard let personCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventPersonCell  else {
+            fatalError("The dequeued cell is not an instance of EventPersonCell.")
+        }
         
         switch(segmentedControl.selectedSegmentIndex)
         {
         case 0:
+            let going = peopleGoing[indexPath.row]
             //person cell corresponds to people going
+            personCell.personName.text = going.firstName + " " + going.lastName
+            personCell.personImg.image = going.image
             break
         case 1:
+            let interested = peopleInterested[indexPath.row]
             //person cell corresponds to people interested
+            personCell.personName.text = interested.firstName + " " + interested.lastName
+            personCell.personImg.image = interested.image
             break
             
         default:
+            let going = peopleGoing[indexPath.row]
+            //person cell corresponds to people going
+            personCell.personName.text = going.firstName + " " + going.lastName
+            personCell.personImg.image = going.image
             break
-            
         }
         return personCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+//        performSegue(withIdentifier: "segue", sender: self)
+//        tableView.deselectRow(at: indexPath, animated: true)
     }
     
     
