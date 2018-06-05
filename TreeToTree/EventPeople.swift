@@ -61,7 +61,7 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
     override func viewDidLoad() {
         super.viewDidLoad()
         
-            
+        /*
         
         //populate both people arrays
         
@@ -94,6 +94,6 @@ class EventPeople : UIViewController, UITableViewDelegate, UITableViewDataSource
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
+    */
+    }
 }
