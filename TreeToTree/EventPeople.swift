@@ -55,22 +55,22 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
         guard let personCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? EventPersonCell  else {
             fatalError("The dequeued cell is not an instance of EventPersonCell.")
         }
-        print("user count")
-        print(self.peopleGoing.count)
+        
+        //round icon
+        personCell.personImg.layer.cornerRadius = personCell.personImg.frame.size.width / 2;
         
         switch(segmentedControl.selectedSegmentIndex)
         {
         case 0:
             
             let going = peopleGoing[indexPath.row]
-            //person cell corresponds to people going
             personCell.personName.text = going.firstName + " " + going.lastName
            // personCell.personImg.image = going.image
             break
         case 1:
             let interested = peopleInterested[indexPath.row]
-            //person cell corresponds to people interested
             personCell.personName.text = interested.firstName + " " + interested.lastName
+        
            // personCell.personImg.image = interested.image
             break
             
@@ -90,8 +90,9 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("going Ids")
-        print(curEvent?.goingIDs!)
+        peopleTableView.delegate = self
+        peopleTableView.dataSource = self
+        
         
         //populate people going array
         for goingId in (curEvent?.goingIDs)! {
@@ -99,20 +100,16 @@ class EventPeople: UIViewController, UITableViewDelegate, UITableViewDataSource 
             print(goingId)
             API.getUserWithKey(goingId, completed: {user in
                 print("got going user")
-                print(user?.firstName)
                 self.peopleGoing.append((user)!)
-                print("appended!")
             })
         }
-        
         
         //populate people interested array
         for interestedId in (curEvent?.interestedIDs)! {
             //load a user with interestedId
-            API.getUserWithKey(interestedId, completed: {User in
+            API.getUserWithKey(interestedId, completed: {user in
                 print("got interested user")
-                print(User!)
-                self.peopleInterested.append(User!)
+                self.peopleInterested.append((user)!)
             })
         }
 

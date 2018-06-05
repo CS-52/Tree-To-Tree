@@ -55,8 +55,8 @@ class Event  {
 //        } else{
 //            self.image = #imageLiteral(resourceName: "Challah-Bread");
 //        }
-        interestedIDs = [String]()
-        if let interestedIDs = dictionary["interestedIDs"] as? Dictionary<String, Any>{
+        interestedIDs = [String]() // -----> nice spelling, lol -suzanne 
+        if let interestedIDs = dictionary["intestedIDs"] as? Dictionary<String, Any>{
             for userID in interestedIDs.keys{
                 self.interestedIDs.append(userID)
             }
